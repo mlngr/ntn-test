@@ -1,23 +1,23 @@
 <template>
   <article
-    v-if="blogPost"
+    v-if="jobPost"
     class="main article"
   >
-    <h1 class="article-title">{{ blogPost.title }}</h1>
+    <h1 class="article-title">{{ jobPost.title }}</h1>
     <h6
-      v-if="blogPost.date"
+      v-if="jobPost.date"
       class="inline-block py-1 px-2 my-2 bg-accent text-white font-medium rounded-sm dark:bg-accent whitespace-no-wrap"
-    >{{ formatDate(blogPost.date) }}</h6>
-    <div v-html="$md.render(blogPost.body)" />
+    >{{ formatDate(jobPost.date) }}</h6>
+    <div v-html="$md.render(jobPost.body)" />
   </article>
 </template>
 <script>
 export default {
   async asyncData({ params, payload }) {
-    if (payload) return { blogPost: payload }
+    if (payload) return { jobPost: payload }
     else
       return {
-        blogPost: await require(`~/assets/content/blog/${params.blog}.json`)
+        jobPost: await require(`~/assets/content/jobs/${params.job}.json`)
       }
   },
   methods: {
