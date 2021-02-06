@@ -3,7 +3,7 @@
     v-if="jobPosts"
     class="main"
   >
-    <h1 class="title text-left">Jobs</h1>
+    <h1 class="title text-left">Emplois</h1>
     <ul
       v-for="(jobPost, index) in jobPosts"
       :key="index"
@@ -19,9 +19,6 @@
             v-if="jobPost.date"
             class="inline-block py-1 px-2 bg-accent text-white font-medium rounded-sm dark:bg-accent whitespace-no-wrap"
           >{{ formatDate(jobPost.date) }}</h6>
-        </div>
-        <div class="mt-4 mb-2">
-          <p class="inline">{{ jobPost.description }}</p>
         </div>
       </nuxt-link>
     </ul>

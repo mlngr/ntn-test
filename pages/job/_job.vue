@@ -17,7 +17,7 @@ export default {
     if (payload) return { jobPost: payload }
     else
       return {
-        jobPost: await require(`~/assets/content/jobs/${params.job}.json`)
+        jobPost: await require(`~/assets/content/job/${params.job}.json`)
       }
   },
   methods: {

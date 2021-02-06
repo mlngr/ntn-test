@@ -50,18 +50,17 @@ collections:
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'job'
-    label: 'Jobs'
+    label: 'Emplois'
     # identifier_field: name
-    folder: 'assets/content/jobs'
+    folder: 'assets/content/job'
     create: true
     format: 'json'
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     # editor:
     #   preview: true
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Job position', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'projects'
     # identifier_field: name
