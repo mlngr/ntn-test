@@ -35,35 +35,7 @@ collections:
               pattern: ['^[a-z]{2}([-])?([A-Za-z]{2})?$', 'Must match "xx" or "xx-XX" syntax (ex. "en" or "sv-SE")'],
             }
           # - { label: Site Email, name: siteemail, widget: string, required: false }
-  - name: 'jobs'
-    label: 'Jobs'
-    # identifier_field: name
-    folder: 'assets/content/job'
-    create: true
-    format: 'json'
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    # editor:
-    #   preview: true
-    fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' } 
-   - name: 'people'
-    label: 'Equipe'
-    # identifier_field: name
-    folder: 'assets/content/people'
-    create: true
-    format: 'json'
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    # editor:
-    #   preview: true
-    fields:
-      - { label: 'Name', name: 'name', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }      
-    - name: 'blog'
+  - name: 'blog'
     label: 'Blog'
     # identifier_field: name
     folder: 'assets/content/blog'
@@ -76,7 +48,21 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }    
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'job'
+    label: 'Jobs'
+    # identifier_field: name
+    folder: 'assets/content/jobs'
+    create: true
+    format: 'json'
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    # editor:
+    #   preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'projects'
     # identifier_field: name
     label: 'Projects'
