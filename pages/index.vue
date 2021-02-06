@@ -2,7 +2,7 @@
   <div class="main text-center flex flex-col items-center justify-center">
     <!-- <logo /> -->
     <h1 class="title">ONADA 🏖</h1>
-    <h2 class="subtitle">This site will become an agency portfolio template</h2>
+    <h2 class="subtitle">This website will become an agency portfolio template</h2>
   </div>
 </template>
 
