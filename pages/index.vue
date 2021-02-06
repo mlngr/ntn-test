@@ -1,7 +1,7 @@
 <template>
   <div class="main text-center flex flex-col items-center justify-center">
     <!-- <logo /> -->
-    <h1 class="title">Nuxt — Tailwind — Netlify CMS</h1>
+    <h1 class="title">ONADA 🏖</h1>
     <h2 class="subtitle">This site will become an agency portfolio template</h2>
   </div>
 </template>
@@ -20,3 +20,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+h1 {
+font-size: 12rem;
+}
+</style>
