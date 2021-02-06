@@ -1,7 +1,11 @@
 {
   "project_type": "story",
   "date": "2021-02-06T21:00:06.504Z",
-  "title": "test",
+  "title": "Test dour",
   "description": "test",
-  "body": "test"
+  "body": "test",
+  "cover": "/img/mosh-pit-at-endfest1.jpg",
+  "gallery": [
+    "/img/matf9257_cover.jpg"
+  ]
 }
