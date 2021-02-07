@@ -19,7 +19,7 @@
         <img
         v-if="projectPost"
         class="gallery__item-imginner"
-        :src="projectPost.cover-listing"
+        :src="projectPost.coverlisting"
       > 
       </div>
 
