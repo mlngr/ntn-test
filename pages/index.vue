@@ -23,6 +23,6 @@ export default {
 
 <style scoped>
 h1 {
-font-size: 12rem;
+font-size: 10rem;
 }
 </style>

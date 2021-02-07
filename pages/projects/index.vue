@@ -3,7 +3,7 @@
     v-if="projectPosts"
     class="main"
   >
-    <h1 class="title text-left">Projects</h1>
+    <h1 class="title text-left">Projets</h1>
     <ul
       v-for="(projectPost, index) in projectPosts"
       :key="index"

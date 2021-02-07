@@ -1,14 +1,25 @@
-import { SET_BLOG_POSTS, SET_PROJECT_POSTS } from './mutations.type'
+// import { SET_BLOG_POSTS, SET_PROJECT_POSTS } from './mutations.type'
+import { SET_PROJECT_POSTS } from './mutations.type'
+
+// export const state = () => ({
+//   blogPosts: [],
+//   projectPosts: []
+// })
 
 export const state = () => ({
-  blogPosts: [],
   projectPosts: []
 })
 
+// export const mutations = {
+//   [SET_BLOG_POSTS](state, list) {
+//     state.blogPosts = list
+//   },
+//   [SET_PROJECT_POSTS](state, list) {
+//     state.projectPosts = list
+//   }
+// }
+
 export const mutations = {
-  [SET_BLOG_POSTS](state, list) {
-    state.blogPosts = list
-  },
   [SET_PROJECT_POSTS](state, list) {
     state.projectPosts = list
   }
@@ -24,8 +35,8 @@ export const actions = {
   },
   async nuxtServerInit({ commit }) {
     // Blog collection type
-    let blogFiles = await require.context('~/assets/content/blog/', false, /\.json$/)
-    await commit(SET_BLOG_POSTS, actions.getPosts(blogFiles))
+    // let blogFiles = await require.context('~/assets/content/blog/', false, /\.json$/)
+    // await commit(SET_BLOG_POSTS, actions.getPosts(blogFiles))
 
     // Project collection type
     let projectFiles = await require.context('~/assets/content/projects/', false, /\.json$/)
