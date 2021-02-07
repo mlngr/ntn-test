@@ -87,7 +87,7 @@ collections:
       - { label: 'Content', name: 'body', widget: 'markdown', required: false }
       - {
           label: 'Cover Image listing projets',
-          name: 'cover-listing',
+          name: 'coverlisting',
           widget: 'image',
           required: false,
           allow_multiple: false,
