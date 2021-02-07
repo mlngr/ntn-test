@@ -1,12 +1,14 @@
 {
-  "project_type": "story",
-  "date": "2021-02-07T00:15:07.208Z",
-  "title": "Place à l’économie sociale",
-  "description": "MOIS DE L’ÉCONOMIE SOCIALE 2019",
-  "cover": "https://mambomambo.ca/medias/images/MOIS-Header.jpg",
+  "project_type": "Identité visuelle",
   "body": "**Démystifier l’économie sociale**\n\nEn collaboration avec les Pôles d’économie sociale et le Chantier de l’économie sociale, l’objectif du mandat était de créer une marque forte permettant de mettre de l’avant l’économie sociale à chaque mois de novembre.  \n\nLa première campagne nationale, de novembre 2019, était axée sur l’importance des retombées économiques et sociales à travers ses différentes régions du Québec.",
+  "coverlisting": "https://images.ctfassets.net/fy4v4doi3fsv/6DR0WG97hwCtZ6NcSssky5/f6528a564051f7d45a6c571aa548e14b/Mask_Group1.jpg?w=1920&fm=webp&q=92",
+  "date": "2021-02-07T00:15:07.208Z",
   "gallery": [
     "https://mambomambo.ca/medias/images/MOIS-Typo-1.jpg",
     "https://mambomambo.ca/medias/images/MOIS-Territoire-2.jpg"
-  ]
+  ],
+  "cover": "https://mambomambo.ca/medias/images/MOIS-Header.jpg",
+  "title": "Place à l’économie sociale",
+  "description": "MOIS DE L’ÉCONOMIE SOCIALE 2019",
+  "year": "2021"
 }
