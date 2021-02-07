@@ -1,5 +1,5 @@
 {
-  "project_type": "story",
+  "project_type": "Identité visuelle",
   "date": "2021-02-07T00:15:07.208Z",
   "title": "Place à l’économie sociale",
   "description": "MOIS DE L’ÉCONOMIE SOCIALE 2019",
@@ -8,5 +8,6 @@
   "gallery": [
     "https://mambomambo.ca/medias/images/MOIS-Typo-1.jpg",
     "https://mambomambo.ca/medias/images/MOIS-Territoire-2.jpg"
-  ]
+  ],
+  "cover-listing": "https://images.ctfassets.net/fy4v4doi3fsv/6DR0WG97hwCtZ6NcSssky5/f6528a564051f7d45a6c571aa548e14b/Mask_Group1.jpg?w=1920&fm=webp&q=92"
 }
