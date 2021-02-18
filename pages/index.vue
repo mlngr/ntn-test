@@ -1,8 +1,9 @@
 <template>
-  <div class="main text-center flex flex-col items-center justify-center">
-    <!-- <logo /> -->
-    <h1 class="title">ONADA 🏖</h1>
-    <h2 class="subtitle">This website will become an agency portfolio template</h2>
+  <div class="main">
+    <section class="leader-homepage">
+    <p class="main-title">ONADA 🏖</p>
+    <h2 class="main-subtitle">This website will become an agency portfolio template</h2>
+    </section>
   </div>
 </template>
 

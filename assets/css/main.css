@@ -1,0 +1,153 @@
+:root {
+    --main-color-light: #1a1a1a;
+    --main-color-dark: #f8f8f8;
+    --secondary-color-light: #526488;
+    --secondary-color-dark: #536488;
+    --border-color-light: #cccccc;
+    --border-color-dark :#323236; 
+    --bg-dark: #1a1a1a;
+    --bg-light: #f8f8f8;
+
+    font-family: sans-serif;
+} 
+
+ul {
+    list-style: none;
+}
+
+button {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.light-mode {
+background-color: var(--bg-light);
+color: var(--secondary-color-light);
+}
+
+.dark-mode {
+    background-color: var(--bg-dark);
+    color: var(--secondary-color-dark);
+} 
+
+.light-mode .icon {
+    border-color: var(--border-color-light);
+} 
+
+.light-mode .icon:hover {
+} 
+
+.dark-mode .icon {
+    border-color: var(--border-color-dark);
+}
+
+
+.icon {
+    width: 22px;
+    height: 22px;
+    border: 2px solid;
+    position: relative;
+    margin: 0;
+    padding: .5rem;
+    top: 0;
+    cursor: pointer;
+    border-radius: .25rem;
+    transition-property: all;
+    transition-duration: .2s;
+} 
+
+.fixed{
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    margin: .75rem;
+}
+
+.container {
+    min-height: 100vh;
+    padding-top: 56px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    flex-direction: column;
+}
+
+.main {
+    width: 100%;
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: .5rem 2rem;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+
+.main-title{
+    margin: auto;
+    font-family: Sans-serif;
+    font-size: 100px;
+}
+
+.main-subtitle {
+    padding: 0px;
+    margin: 0px;
+    display: block;
+    letter-spacing: .025em;
+    word-spacing: .15em;
+    font-weight: 300;
+    font-size: 1.875rem;
+    padding-bottom: 1rem;
+    transition-property: background-color,border-color,color,fill,stroke;
+    transition-duration: .2s;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+}
+
+/* nav */
+
+nav {
+    display: block;
+}
+
+.nuxt-link-exact-active {
+    color: #f9e9ea;
+    background-color: #a84048;
+}
+
+.nuxt-link-exact-active:hover {
+    opacity: 0.75;
+}
+
+.btn {
+    text-align: center;
+    border-radius: .25rem;
+    padding: .5rem 1rem;
+    border-width: 1px;
+}
+
+.light-mode .btn {
+    color: var(--main-color-light);
+}
+
+.dark-mode .btn {
+    color: var(--main-color-dark);
+}
+
+.btn:hover {
+    opacity: 0.75;
+}
+
+.block {
+    display: block;
+}
+
+
+    
+    

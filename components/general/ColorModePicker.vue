@@ -57,9 +57,3 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped>
-.icon {
-  width: 44px;
-  height: 44px;
-}
-</style>

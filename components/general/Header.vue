@@ -18,18 +18,18 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.nuxt-link-exact-active {
-  @apply text-accent-100 bg-accent bg-opacity-20;
-  &:hover {
-    @apply text-white bg-accent-600;
-  }
+
+.flex-1{
+flex: 1 1 0%;
+} 
+
+.fixed {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    padding: 0 0.75rem;
+    display: flex;
 }
-.light-mode {
-  & .nuxt-link-exact-active {
-    @apply text-accent-600;
-    &:hover {
-      @apply text-white;
-    }
-  }
-}
+
 </style>
