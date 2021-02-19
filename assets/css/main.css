@@ -1,16 +1,19 @@
 :root {
     --main-color-light: #1a1a1a;
     --main-color-dark: #f8f8f8;
-    --secondary-color-light: #526488;
-    --secondary-color-dark: #536488;
+    --secondary-color-light: #0c0c0c;
+    --secondary-color-dark: #f8f8f8;
     --border-color-light: #cccccc;
     --border-color-dark :#323236; 
     --bg-dark: #1a1a1a;
-    --bg-light: #f8f8f8;
+    --bg-light: #ffffff;
 
     font-family: sans-serif;
 } 
 
+body{
+    margin: 0;
+}
 ul {
     list-style: none;
 }
@@ -29,8 +32,8 @@ color: var(--secondary-color-light);
 }
 
 .dark-mode {
-    background-color: var(--bg-dark);
-    color: var(--secondary-color-dark);
+background-color: var(--bg-dark);
+color: var(--secondary-color-dark);
 } 
 
 .light-mode .icon {
@@ -79,10 +82,9 @@ color: var(--secondary-color-light);
 
 .main {
     width: 100%;
-    max-width: 64rem;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding: .5rem 2rem;
     flex-direction: column;
     justify-content: center;
     text-align: center;
@@ -92,8 +94,9 @@ color: var(--secondary-color-light);
 
 .main-title{
     margin: auto;
-    font-family: Sans-serif;
-    font-size: 100px;
+    font-size: 8vw;
+    font-weight: bold;
+
 }
 
 .main-subtitle {
