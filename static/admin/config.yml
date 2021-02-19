@@ -11,34 +11,6 @@ public_folder: /img
 
 # Docs: https://www.netlifycms.org/docs/configuration-options/#collections
 collections:
-- label: "Pages"
-name: "pages"
-files:
-  - label: "Page d'accueil"
-    name: "homepage"
-    file: "site/content/homepage.yml"
-    fields:
-      - {label: Title, name: title, widget: string}
-      - {label: Intro, name: intro, widget: markdown}
-      - label: Team
-        name: team
-        widget: list
-        fields:
-          - {label: Name, name: name, widget: string}
-          - {label: Position, name: position, widget: string}
-          - {label: Photo, name: photo, widget: image}
-  - label: "Locations Page"
-    name: "locations"
-    file: "site/content/locations.yml"
-    fields:
-      - {label: Title, name: title, widget: string}
-      - {label: Intro, name: intro, widget: markdown}
-      - label: Locations
-        name: locations
-        widget: list
-        fields:
-          - {label: Name, name: name, widget: string}
-          - {label: Address, name: address, widget: string}
   - label: 'Site settings'
     name: 'site'
     files:
@@ -63,6 +35,34 @@ files:
               pattern: ['^[a-z]{2}([-])?([A-Za-z]{2})?$', 'Must match "xx" or "xx-XX" syntax (ex. "en" or "sv-SE")'],
             }
           # - { label: Site Email, name: siteemail, widget: string, required: false }
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "Page d'accueil"
+        name: "homepage"
+        file: "site/content/homepage.yml"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: markdown}
+          - label: Team
+            name: team
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Position, name: position, widget: string}
+              - {label: Photo, name: photo, widget: image}
+      - label: "Locations Page"
+        name: "locations"
+        file: "site/content/locations.yml"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: markdown}
+          - label: Locations
+            name: locations
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Address, name: address, widget: string}
   # - name: 'blog'
   #   label: 'Blog'
   #   # identifier_field: name
