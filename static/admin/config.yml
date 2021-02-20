@@ -40,10 +40,13 @@ collections:
     files:
       - label: "Page d'accueil"
         name: "homepage"
-        file: "site/content/homepage.yml"
+        file: "assets/content/site/homepage.json"
+        format: 'json'
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: markdown}
+          - {label: Titre, name: title, widget: string}
+          - {label: Intro, name: intro, widget: string}
+          - {label: Label button, name: buttonLabel, widget: string}
+          - {label: Lien button, name: buttonLink, widget: string}
           - label: Team
             name: team
             widget: list

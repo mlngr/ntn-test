@@ -3,8 +3,12 @@
     <section class="leader-homepage">
     <div class="leader-content">
       <div class="main-text">
-    <p class="main-title">ONADA 🏖</p>
-    <h2 class="main-subtitle">This website will become an agency portfolio template</h2>
+    <p class="main-title">{{ homeContent.title }}</p>
+    <h2 class="main-subtitle" >{{ homeContent.intro }}</h2>
+    
+      <a :src="homeContent.buttonLink" >
+        <button class="button-text-content">{{ homeContent.buttonLabel }}</button>
+        </a>
       </div>
     </div>
     </section>
@@ -61,12 +65,15 @@
 </template>
 
 <script>
-// import Logo from '~/components/Logo.vue'
 
 export default {
-  // components: {
-  //   Logo
-  // },
+  async asyncData({ payload }) {
+  if (payload) return { homeContent: payload }
+  else
+    return {
+      homeContent: await require(`~/assets/content/site/homepage.json`)
+    }
+  },
   head() {
     return {
       script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }]
