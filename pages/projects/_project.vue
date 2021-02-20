@@ -9,6 +9,7 @@
         v-if="projectPost"
         class="cover-image"
         :src="projectPost.cover"
+        alt="Maximilien Langonier développeur créatif"
       > 
   </section>
 

@@ -25,10 +25,14 @@ export default {
    ** Headers of the page
    */
   head: {
+    htmlAttrs: {
+      lang: 'fr'
+    },
     title: SITE_INFO.sitename || process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name="theme-color", content="#f8f8f8" },
       {
         hid: 'description',
         name: 'description',
@@ -94,7 +98,7 @@ export default {
       source: 'static/icon.png',
       filename: 'icon.png'
     },
-    manifest: { name: SITE_INFO.sitename || process.env.npm_package_name || '', lang: process.env.lang },
+    manifest: { name: SITE_INFO.sitename || process.env.npm_package_name || '', lang: process.env.lang, theme_color: '#f8f8f8', },
     meta: {
       name: SITE_INFO.sitename || process.env.npm_package_name || '',
       lang: process.env.lang,

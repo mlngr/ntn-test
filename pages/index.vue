@@ -6,7 +6,7 @@
     <p class="main-title">{{ homeContent.title }}</p>
     <h2 class="main-subtitle" >{{ homeContent.intro }}</h2>
     
-      <a :src="homeContent.buttonLink" >
+      <a :href="homeContent.buttonLink" >
         <button class="button-text-content">{{ homeContent.buttonLabel }}</button>
         </a>
       </div>
@@ -19,7 +19,7 @@
               <div class="dontknow2">
               <div class="content-video">
             <div class="content-image">
-            <img src="https://www.datocms-assets.com/38511/1611231359-01-testanywhre-anytimeposter.jpg" class="hDwyTD">
+            <img src="https://www.datocms-assets.com/38511/1611231359-01-testanywhre-anytimeposter.jpg" alt="Maximilien Langonier développeur créatif" class="hDwyTD">
             </div>
             </div> 
               <div class="content-bloc-text"> 
@@ -28,8 +28,8 @@
                 </div>
                 <p class="content-bloc-text-p">Easily create a maze for every project need, from usability tests to user surveys, then share with users in a matter of minutes with a simple URL. </p>
                 <div class="content-bloc-text-button">
-                  <a title="Remote Testing" href="/platform/user-testing/"><button name="Remote Testing" class="button-text-content">
-                    <div class="content-button-text-content">Learn more</div></button></a>
+                  <a title="Remote Testing" href="/"><button name="Remote Testing" class="button-text-content">
+                    <div class="content-button-text-content">Découvrir nos services</div></button></a>
                 </div>
               </div>
               </div>
@@ -44,7 +44,7 @@
               <div class="dontknow2 row-reverse">
               <div class="content-video">
             <div class="content-image">
-            <img src="https://images.unsplash.com/photo-1613591733452-811c8e40bc99?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1OXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" class="hDwyTD">
+            <img src="https://images.unsplash.com/photo-1613591733452-811c8e40bc99?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1OXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="Maximilien Langonier développeur créatif" class="hDwyTD">
             </div>
             </div> 
               <div class="content-bloc-text"> 
@@ -53,14 +53,16 @@
                 </div>
                 <p class="content-bloc-text-p">Easily create a maze for every project need, from usability tests to user surveys, then share with users in a matter of minutes with a simple URL. </p>
                 <div class="content-bloc-text-button">
-                  <a title="Remote Testing" href="/platform/user-testing/"><button name="Remote Testing" class="button-text-content">
-                    <div class="content-button-text-content">Learn more</div></button></a>
+                  <a title="Remote Testing" href="/"><button name="Remote Testing" class="button-text-content">
+                    <div class="content-button-text-content">Découvrir nos services</div></button></a>
                 </div>
               </div>
               </div>
             </div>
         </div>
       </section>
+
+      
   </div>
 </template>
 

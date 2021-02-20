@@ -20,6 +20,7 @@
         v-if="projectPost"
         class="gallery__item-imginner"
         :src="projectPost.coverlisting"
+        alt="Maximilien Langonier développeur créatif"
       > 
       </div>
 
