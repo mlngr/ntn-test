@@ -7,7 +7,6 @@
     --border-color-dark :#323236; 
     --bg-dark: #1a1a1a;
     --bg-light: #ffffff;
-
     font-family: sans-serif;
 } 
 
@@ -26,9 +25,17 @@ a {
     text-decoration: none;
 }
 
+.light-mode a {
+    color: var(--secondary-color-light);
+}
+
+.dark-mode a {
+    color: var(--secondary-color-dark);
+}
+
 .light-mode {
-background-color: var(--bg-light);
-color: var(--secondary-color-light);
+    background-color: var(--bg-light);
+    color: var(--secondary-color-light);
 }
 
 .dark-mode {
@@ -68,6 +75,19 @@ color: var(--secondary-color-dark);
     position: fixed;
     margin: .75rem;
 }
+
+.flex-1 {
+    flex: 1 1 0%;
+  }
+  
+  .top-nav {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    padding: 0 0.75rem;
+    display: flex;
+  }
 
 .container {
     min-height: 100vh;
