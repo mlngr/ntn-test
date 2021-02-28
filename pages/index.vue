@@ -1,17 +1,27 @@
 <template>
   <div class="main">
     <section class="leader-homepage">
-      <!-- <video autoplay muted loop id="myVideo">
-        <source src="nice.mp4" type="video/mp4" />
-      </video> -->
       <div class="leader-content">
         <div class="main-text">
-          <p class="main-title">{{ homeContent.title }}</p>
-          <h2 class="main-subtitle">{{ homeContent.intro }}</h2>
+          <div class="blend-mode">
+            <p class="main-title">{{ homeContent.title }}</p>
+            <h2 class="main-subtitle">{{ homeContent.intro }}</h2>
+          </div>
+          <video autoplay muted loop id="myVideo">
+            <source src="~static/nice.mp4" type="video/mp4" />
+          </video>
 
-          <a :href="homeContent.buttonLink">
+          <div data-v-87e48666="" class="holder"></div>
+
+          <!-- <a :href="homeContent.buttonLink">
             <button class="button-text-content">{{ homeContent.buttonLabel }}</button>
-          </a>
+          </a> -->
+          <div class="keywords">
+            <span class="keyword">design et création de site internet à Nice</span>
+            <!-- <span class="keyword">expérience utilisateur</span>
+            <span class="keyword">développement</span>
+            <span class="keyword">référencement</span> -->
+          </div>
         </div>
       </div>
     </section>
@@ -77,7 +87,7 @@
             <div class="content-video">
               <div class="content-image">
                 <img
-                  src="http://studioplastac.fr/v3/wp-content/uploads/2020/12/gloria-plastac-papeterie-06.jpg"
+                  src="https://studioplastac.fr/v3/wp-content/uploads/2020/12/gloria-plastac-papeterie-06.jpg"
                   alt="Maximilien Langonier développeur créatif"
                   class="hDwyTD"
                 />
@@ -197,17 +207,16 @@ h1 {
   font-size: 10rem;
 }
 
-/*
 #myVideo {
-  z-index: -10;
+  z-index: -1;
   position: absolute;
-  right: 0;
   left: 0;
+  right: 0;
   bottom: 0;
-  width: 100%;
+  top: 0;
   height: 100vh;
+  object-fit: contain;
 }
-*/
 
 .section-two-column {
   position: relative;
@@ -376,6 +385,11 @@ section.leader-homepage {
   align-items: center;
   justify-content: center;
   align-self: start;
+  background-color: #1e344a;
+}
+
+.leader-content {
+  z-index: 1;
 }
 
 .row-reverse {
