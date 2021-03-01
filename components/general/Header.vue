@@ -25,12 +25,9 @@ export default {
   position: absolute;
   top: 32px;
   right: 24px;
-  margin-top: 0px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #ac4e29;
   border-radius: 80px;
-  background-color: #ac4e29;
+  background: rgb(18, 84, 241);
+  background: linear-gradient(128deg, rgba(18, 84, 241, 1) 0%, rgba(192, 117, 236, 1) 100%);
   text-decoration: none;
   z-index: 2;
 }

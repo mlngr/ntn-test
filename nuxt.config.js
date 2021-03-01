@@ -19,7 +19,7 @@ export default {
       process.env.NODE_ENV === 'production'
         ? process.env.URL || 'http://createADotEnvFileAndSetURL'
         : 'http://localhost:3000',
-    lang: SITE_INFO.sitelang || 'en-US'
+    lang: SITE_INFO.sitelang || 'fr-FR'
   },
   /*
    ** Headers of the page
@@ -95,7 +95,7 @@ export default {
   },
   pwa: {
     icon: {
-      source: 'static/icon.png',
+      source: '~static/icon.png',
       filename: 'icon.png'
     },
     manifest: { name: SITE_INFO.sitename || process.env.npm_package_name || '', lang: process.env.lang, theme_color: '#f8f8f8', },

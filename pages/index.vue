@@ -17,16 +17,22 @@
             <button class="button-text-content">{{ homeContent.buttonLabel }}</button>
           </a> -->
           <div class="keywords">
-            <span class="keyword">design et création de site internet à Nice</span>
-            <!-- <span class="keyword">expérience utilisateur</span>
+            <span class="keyword">design</span>
+            <span class="keyword">expérience utilisateur</span>
             <span class="keyword">développement</span>
-            <span class="keyword">référencement</span> -->
+            <span class="keyword">référencement</span>
           </div>
+          <a href="#services">
+            <div class="hero-scroll-container">
+              <span class="scroll">Scroll</span>
+            </div>
+          </a>
         </div>
       </div>
     </section>
 
     <section id="DatoCmsSHeadline-11960556-en">
+      <span id="services"></span>
       <div class="sc-bdfBwQ UElzp Box-cYgLTd dTLTVs">
         <div class="sc-dlfnbm gQsQBB">
           <div class="sc-hKgILt gALUoe">
@@ -215,7 +221,8 @@ h1 {
   bottom: 0;
   top: 0;
   height: 100vh;
-  object-fit: contain;
+  width: 100%;
+  object-fit: cover;
 }
 
 .section-two-column {
@@ -408,6 +415,36 @@ section.leader-homepage {
   flex-flow: row wrap;
   margin-right: -2rem;
   margin-left: -2rem;
+}
+
+.hero-scroll-container {
+  padding: 30px;
+}
+
+.hero-scroll-container {
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  padding: 3.3333333333vh 2.0833333333vw;
+  width: auto;
+  box-sizing: border-box;
+  z-index: 4;
+  text-align: right;
+}
+
+.hero-scroll-container .scroll::after {
+  content: ' ↓';
+}
+
+.hero-scroll-container .scroll:after {
+  display: block;
+}
+
+.hero-scroll-container .scroll {
+  color: var(--white);
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
 }
 
 @media (min-width: 1600px) {
