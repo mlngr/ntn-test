@@ -16,7 +16,9 @@
   "license": "MIT",
   "dependencies": {
     "@nuxtjs/markdownit": "^1.2.6",
-    "nuxt": "^2.14.12"
+    "nuxt": "^2.14.12",
+    "swiper": "^5.4.5",
+    "vue-awesome-swiper": "^4.1.1"
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^1.1.1",

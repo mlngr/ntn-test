@@ -1,12 +1,13 @@
 <template>
-  <div class="main">
-    <section class="leader-homepage">
+  <div class="main" :class="{ change_color: scrollPosition > 3200 }">
+    <section class="leader-homepage panel" data-color="white">
       <div class="leader-content">
         <div class="main-text">
           <div class="blend-mode">
-            <p class="main-title">{{ homeContent.title }}</p>
+            <h1 class="main-title">Studio Clax</h1>
             <h2 class="main-subtitle">{{ homeContent.intro }}</h2>
           </div>
+          <img id="myVideo" src="~static/placeholder-nice-min.png" />
           <video autoplay muted loop id="myVideo">
             <source src="~static/nice.mp4" type="video/mp4" />
           </video>
@@ -37,15 +38,7 @@
         <div class="sc-dlfnbm gQsQBB">
           <div class="sc-hKgILt gALUoe">
             <div class="sc-eCssSg dIcDaN">
-              <h2
-                color="black"
-                font-family="Roobert, sans-serif"
-                class="Text-jAOEoN SectionTitle__StyledSectionTitle-cOxWkj leKkVv fCRuop SectionTitle__StyledSectionTitle-sc-6zpykb-0 idhKzo"
-                font-size="1"
-                font-weight="500"
-              >
-                Une palette pluridisciplinaire au service de vos projets
-              </h2>
+              <h2 class="section-title panel">Une palette pluridisciplinaire au service de vos projets</h2>
             </div>
           </div>
         </div>
@@ -188,10 +181,52 @@
         </div>
       </div>
     </section>
+    <section id="DatoCmsSHeadline-11960556-en">
+      <span id="services"></span>
+      <div class="sc-bdfBwQ UElzp Box-cYgLTd dTLTVs">
+        <div class="sc-dlfnbm gQsQBB">
+          <div class="sc-hKgILt gALUoe">
+            <div class="sc-eCssSg dIcDaN">
+              <h2
+                class="Text-jAOEoN SectionTitle__StyledSectionTitle-cOxWkj leKkVv fCRuop SectionTitle__StyledSectionTitle-sc-6zpykb-0 section-title"
+                font-size="1"
+                font-weight="500"
+              >
+                Nos dernières réalisations
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <SliderHomepage />
+    <section class="collaborate">
+      <span class="collaborate-first-word">Un projet?</span>
+      <div class="arrow-contact">
+        <svg class="svg-max" viewBox="0 0 337.21 194.22" preserveAspectRatio="none">
+          <path
+            d="M214.1,38.06c-36.79-5.14-69.86-2.83-98.28,6.86A147.59,147.59,0,0,0,56.67,82.21a153.93,153.93,0,0,0-33,51.8L10.47,107.45,3.31,111l16.11,32.34,3.26,7.22L61.55,133l-3.29-7.29L30.73,138.17a147,147,0,0,1,32-50.67,139.8,139.8,0,0,1,56-35.09C145.81,43.2,177.56,41,213,46l4,.55,1.1-7.92Z"
+            data-svg-origin="67.7470025062561 69.94620056152343"
+          ></path>
+          <path
+            id="path"
+            stroke-width="8px"
+            d="M148.42,36.08C127.27,39.66,104,47.64,82.5,64.3A149.62,149.62,0,0,0,63.28,82.18"
+          ></path>
+        </svg>
+      </div>
+      <span class="collaborate-second-word"
+        >Contactez-nous!
+        <hr
+      /></span>
+    </section>
   </div>
 </template>
 
+
 <script>
+import SliderHomepage from '~/components/general/SliderHomepage.vue'
+
 export default {
   async asyncData({ payload }) {
     if (payload) return { homeContent: payload }
@@ -204,6 +239,22 @@ export default {
     return {
       script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
     }
+  },
+  data: function () {
+    return {
+      scrollPosition: null,
+    }
+  },
+  methods: {
+    updateScroll() {
+      this.scrollPosition = window.scrollY
+    },
+  },
+  mounted() {
+    window.addEventListener('scroll', this.updateScroll)
+  },
+  components: {
+    SliderHomepage,
   },
 }
 </script>
@@ -448,10 +499,10 @@ section.leader-homepage {
 }
 
 @media (min-width: 1600px) {
-  .UElzp {
+  /* .UElzp {
     margin-top: 160px;
     margin-bottom: 160px;
-  }
+  } */
 
   .gQsQBB {
     width: 132rem;
@@ -463,7 +514,7 @@ section.leader-homepage {
     display: block;
   }
 
-  .idhKzo {
+  .section-title {
     font-size: 4.4rem;
   }
 }
@@ -490,14 +541,14 @@ section.leader-homepage {
     margin-bottom: 140px;
   }
 
-  .idhKzo {
+  .section-title {
     font-size: 3.4rem;
   }
 
-  .UElzp {
+  /* .UElzp {
     margin-top: 160px;
     margin-bottom: 160px;
-  }
+  } */
 
   .dIcDaN {
     flex-basis: 66.6667%;
@@ -548,5 +599,88 @@ section.leader-homepage {
   .content-bloc-text {
     font-size: 22px;
   }
+
+  .main-title {
+    font-size: 72px;
+  }
+
+  .main-subtitle {
+    font-size: 24px;
+  }
+
+  .keyword {
+    font-size: 14px;
+  }
+
+  .hero-scroll-container {
+    display: none;
+  }
+
+  .h2-sans---450.contact-button {
+    font-size: 14px !important;
+  }
+}
+
+section.collaborate {
+  text-align: left;
+  padding: 60px;
+}
+
+.arrow-contact {
+  transform: rotateY(180deg);
+  display: inline-block;
+}
+
+.svg-max {
+  fill: black;
+  width: 180px;
+  pointer-events: none;
+  bottom: -10px;
+  right: 20px;
+  -webkit-animation: rotation 4s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(280deg);
+  }
+  50% {
+    -webkit-transform: rotate(380deg);
+  }
+  100% {
+    -webkit-transform: rotate(280deg);
+  }
+}
+
+.collaborate-first-word {
+  font-size: 10rem;
+}
+
+.collaborate-second-word {
+  font-size: 12rem;
+  font-weight: bold;
+  font-family: 'Kobe';
+}
+
+/* Setting fade transition and default settings */
+body {
+  transition: background-color 1s ease;
+}
+
+/* panel styles */
+.panel {
+  /* min height incase content is higher than window height */
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.change_color {
+  background-color: rgb(8, 77, 42);
+  -webkit-transition: background-color 0.5s ease-in-out;
+  -o-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+  will-change: background-color, opacity;
 }
 </style>

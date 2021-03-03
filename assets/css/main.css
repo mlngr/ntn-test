@@ -125,24 +125,28 @@ color: var(--secondary-color-dark);
 
 
 .main-title{
-    mix-blend-mode: difference;
     margin: auto;
     font-size: 12vw;
     font-weight: bold;
-font-family: "Kobe", sans-serif;
+    font-family: "Kobe", sans-serif;
 }
 
 .main-subtitle {
     padding: 0px;
     margin: 0px;
     display: block;
-    word-spacing: .15em;
     font-weight: 300;
-    font-size: 2.2vw;
+    font-size: 2.8vw;
     padding-bottom: 1rem;
     transition-property: background-color,border-color,color,fill,stroke;
     transition-duration: .2s;
     transition-timing-function: cubic-bezier(.4,0,.2,1);
+}
+
+h2.section-title  {
+    font-family: 'kobe';
+    font-size: 6rem !important;
+    margin-bottom: 0;
 }
 
 /* nav */

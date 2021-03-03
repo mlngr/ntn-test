@@ -63,6 +63,13 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
+    { src: '@/plugins/vue-awesome-swiper.js', mode: 'client' }
+  ],
+  script: [
+    {
+      src: "https://code.jquery.com/jquery-3.3.1.slim.min.js",
+      type: "text/javascript"
+    }
   ],
   /*
    ** Nuxt.js dev-modules
