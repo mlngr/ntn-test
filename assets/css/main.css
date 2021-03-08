@@ -13,6 +13,7 @@
 @font-face {
     font-family: "Kobe";
     src: url(~assets/css/fonts/Kobe.otf) format("opentype");
+    font-display: fallback;
 }
 
 html{
@@ -38,11 +39,11 @@ a {
 }
 
 .light-mode a {
-    color: var(--secondary-color-light);
+    color: inherit;
 }
 
 .dark-mode a {
-    color: var(--secondary-color-dark);
+    color: inherit;
 }
 
 .light-mode {

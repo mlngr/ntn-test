@@ -32,11 +32,11 @@
         </swiper-slide>
         <swiper-slide class="swiper-slide">
           <div class="wayfx-slide-content">
-            <a href="">
+            <a href="https://koplesh.co/">
               <img
                 data-src="https://cdn.archilovers.com/projects/b_730_326b440a-f905-4a15-b463-7de75480292e.jpg"
                 class="ls-is-cached lazyloaded"
-                alt=""
+                alt="Studio Clax - Création et développement de site internets à Nice - KOPLESH - Concerts, agenda paris, musique indé"
                 width="800px"
                 height="600px"
                 v-lazy-load
@@ -76,6 +76,7 @@ export default {
       banners: ['/slider-1.png', 'https://easol.com/images/homepage/testimonials/6.webp'],
       swiperOption: {
         slidesPerView: 'auto',
+        loop: true,
       },
     }
   },
@@ -93,8 +94,17 @@ section.slider {
   margin: 60px auto;
   padding-top: 0px;
   padding-bottom: 0px;
-  -webkit-animation: scroll-data-v-2a183b29 60s linear infinite;
-  animation: scroll-data-v-2a183b29 60s linear infinite;
+  -webkit-animation: scroll 60s linear infinite;
+  animation: scroll 60s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
 }
 
 .swiper-wrapper {

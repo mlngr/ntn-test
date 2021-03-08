@@ -5,7 +5,7 @@
         <div class="main-text">
           <h1 class="main-title">Studio Clax</h1>
           <h2 class="main-subtitle">{{ homeContent.intro }}</h2>
-          <img id="myVideo" src="~/static/placeholder-nice-min.png" alt="Studio Clax - Création et développement de site internets à Nice" />
+          <img id="myVideo" src="~/static/placeholder-nice.webp" alt="Studio Clax - Création et développement de site internets à Nice" />
           <video autoplay muted loop id="myVideo">
             <source src="~/static/nice.mp4" type="video/mp4" />
           </video>
@@ -920,11 +920,11 @@ hr.service-line {
   }
 
   .collaborate-first-word {
-    font-size: 3.2em;
+    font-size: 3.2rem;
   }
 
   .collaborate-second-word {
-    font-size: 3.2em;
+    font-size: 3.2rem;
   }
 
   section.whatwedo .content {
@@ -970,6 +970,10 @@ section.collaborate {
   pointer-events: none;
   bottom: -10px;
   right: 20px;
+  animation-name: rotation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
   -webkit-animation: rotation 4s infinite linear;
 }
 
