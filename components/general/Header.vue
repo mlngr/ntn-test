@@ -1,5 +1,5 @@
 <template>
-  <nav class="">
+  <!-- <nav class="">
     <a class="menu_link_left"> <img src="~/static/icon.png" /> </a>
     <ul class="flex top-nav top-0 inset-x-0 p-3">
       <li class="flex-1 mr-2">
@@ -12,7 +12,7 @@
     <a href="mailto:m.langonier@gmail.com" class="menu_link_button">
       <h3 class="h2-sans---450 contact-button">Un projet ? Contactez-nous</h3></a
     >
-  </nav>
+  </nav> -->
 </template>
 
 <script>
@@ -37,10 +37,6 @@ export default {
   position: absolute;
   top: 32px;
   left: 24px;
-  border-radius: 80px;
-  background: rgb(18, 84, 241);
-  background: linear-gradient(128deg, rgba(18, 84, 241, 1) 0%, rgba(192, 117, 236, 1) 100%);
-  text-decoration: none;
   z-index: 2;
 }
 

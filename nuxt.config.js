@@ -39,12 +39,13 @@ export default {
         content: SITE_INFO.sitedescription || process.env.npm_package_description || ''
       }
     ],
+    /*
     link: [
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400&display=swap'
       }
-    ] // ? Imports the font 'Karla' and is optimized by the netlify plugin 'Subfont'
+    ] // ? Imports the font 'Karla' and is optimized by the netlify plugin 'Subfont' */
   },
   generate: {
     routes: dynamicRoutes,
@@ -63,13 +64,8 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    { src: '@/plugins/vue-awesome-swiper.js', mode: 'client' }
-  ],
-  script: [
-    {
-      src: "https://code.jquery.com/jquery-3.3.1.slim.min.js",
-      type: "text/javascript"
-    }
+    { src: '@/plugins/vue-awesome-swiper.js', mode: 'client' },
+    { src: '@/plugins/vue-observe-visibility.client.js', mode: 'client' }
   ],
   /*
    ** Nuxt.js dev-modules
@@ -78,7 +74,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/markdownit'],
+  modules: ['@nuxtjs/markdownit', 'nuxt-lazy-load'],
   markdownit: {
     injected: true
   },

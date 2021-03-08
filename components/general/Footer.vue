@@ -44,7 +44,7 @@ hr {
   padding: 0;
   height: 1px;
   border: 0;
-  border-top: 1px solid white;
+  border-top: 1.5px solid;
 }
 
 @media (min-width: 0px) and (max-width: 639px) {

@@ -1,18 +1,16 @@
 <template>
-  <div class="main" :class="{ change_color: scrollPosition > 3200 }">
-    <section class="leader-homepage panel" data-color="white">
+  <div class="main">
+    <section class="leader-homepage panel">
       <div class="leader-content">
         <div class="main-text">
-          <div class="blend-mode">
-            <h1 class="main-title">Studio Clax</h1>
-            <h2 class="main-subtitle">{{ homeContent.intro }}</h2>
-          </div>
-          <img id="myVideo" src="~static/placeholder-nice-min.png" />
+          <h1 class="main-title">Studio Clax</h1>
+          <h2 class="main-subtitle">{{ homeContent.intro }}</h2>
+          <img id="myVideo" src="~/static/placeholder-nice-min.png" />
           <video autoplay muted loop id="myVideo">
-            <source src="~static/nice.mp4" type="video/mp4" />
+            <source src="~/static/nice.mp4" type="video/mp4" />
           </video>
 
-          <div data-v-87e48666="" class="holder"></div>
+          <div class="holder"></div>
 
           <!-- <a :href="homeContent.buttonLink">
             <button class="button-text-content">{{ homeContent.buttonLabel }}</button>
@@ -30,157 +28,37 @@
           </a>
         </div>
       </div>
-    </section>
-
-    <section id="DatoCmsSHeadline-11960556-en">
-      <span id="services"></span>
-      <div class="sc-bdfBwQ UElzp Box-cYgLTd dTLTVs">
-        <div class="sc-dlfnbm gQsQBB">
-          <div class="sc-hKgILt gALUoe">
-            <div class="sc-eCssSg dIcDaN">
-              <h2 class="section-title panel">Une palette pluridisciplinaire au service de vos projets</h2>
-            </div>
-          </div>
+      <div class="marquee-container">
+        <div class="marquee-wrapper">
+          <p class="marquee-text">
+            Site en développment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mais nous
+            sommes ouverts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N'hésitez pas à nous
+            contacter !&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Site en
+            développment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mais nous sommes
+            ouverts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N'hésitez pas à nous
+            contacter !&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Site en
+            développment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mais nous sommes
+            ouverts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N'hésitez pas à nous
+            contacter !&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Site en
+            développment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mais nous sommes
+            ouverts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N'hésitez pas à nous
+            contacter !&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </p>
         </div>
       </div>
     </section>
-
-    <section class="section-two-column">
-      <div class="dontknow1">
-        <div class="content-video-text">
-          <div class="dontknow2">
-            <div class="content-video">
-              <div class="content-image">
-                <img
-                  src="https://www.datocms-assets.com/38511/1611231359-01-testanywhre-anytimeposter.jpg"
-                  alt="Maximilien Langonier développeur créatif"
-                  class="hDwyTD"
-                />
-              </div>
-            </div>
-            <div class="content-bloc-text">
-              <div class="content-bloc-text-title">
-                <h2 class="content-bloc-text-title-h2">01. Stratégie</h2>
-              </div>
-              <p class="content-bloc-text-p">
-                Découverte de votre histoire, de vos valeurs et de vos objectifs afin d’élaborer ensemble des stratégies
-                - adaptées et efficaces - appuyées par le numérique.
-              </p>
-              <div class="content-bloc-text-button">
-                <a title="Remote Testing" href="/"
-                  ><button name="Remote Testing" class="button-text-content">
-                    <div class="content-button-text-content">Découvrir nos services</div>
-                  </button></a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
+    <section class="whatwedo" @scroll="updateScroll" @mouseenter="lazyLoadImage">
+      <div class="content">
+        <!-- <h2>Bonjour 👋</h2> -->
+        <p class="main-intro">
+          Notre objectif est de transformer les gens en amateurs de marques. Nous suivons l'approche "digital-first".
+          Des expériences numériques convaincantes résultent d'une marque bien définie. Grâce à nos outils, nous créons
+          des sites web de marque, des applications et des canaux de médias sociaux qui convertissent, que leur objectif
+          soit l'information, le commerce électronique, le divertissement ou la communication.
+        </p>
       </div>
     </section>
 
-    <section class="section-two-column">
-      <div class="dontknow1">
-        <div class="content-video-text">
-          <div class="dontknow2 row-reverse">
-            <div class="content-video">
-              <div class="content-image">
-                <img
-                  src="https://studioplastac.fr/v3/wp-content/uploads/2020/12/gloria-plastac-papeterie-06.jpg"
-                  alt="Maximilien Langonier développeur créatif"
-                  class="hDwyTD"
-                />
-              </div>
-            </div>
-            <div class="content-bloc-text">
-              <div class="content-bloc-text-title">
-                <h2 class="content-bloc-text-title-h2">02. Design</h2>
-              </div>
-              <p class="content-bloc-text-p">
-                Nos regards créatifs, toujours à l'affût des aspirations du moment, nous permettent de définir des
-                positionnements identitaires, de repenser votre logo, de redéfinir votre charte graphique. Tout en
-                déclinant ces choix pour vos produits numériques.
-              </p>
-              <div class="content-bloc-text-button">
-                <a title="Remote Testing" href="/"
-                  ><button name="Remote Testing" class="button-text-content">
-                    <div class="content-button-text-content">Découvrir notre démarche UX</div>
-                  </button></a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-two-column">
-      <div class="dontknow1">
-        <div class="content-video-text">
-          <div class="dontknow2">
-            <div class="content-video">
-              <div class="content-image">
-                <img
-                  src="https://www.5-5.paris/public_data/savoir/1518618584/40-27/2048/studio55-savoirfaire-identite-siteinternet2.jpg"
-                  alt="Maximilien Langonier développeur créatif"
-                  class="hDwyTD"
-                />
-              </div>
-            </div>
-            <div class="content-bloc-text">
-              <div class="content-bloc-text-title">
-                <h2 class="content-bloc-text-title-h2">03. Contenu</h2>
-              </div>
-              <p class="content-bloc-text-p">
-                Comment mettre en avant vos produits, votre lieu ou vos équipes sans du contenu à la hauteur ? Nous
-                collaborons avec des photographes professionnels capables de mettre en lumière tous vos projets.
-              </p>
-              <div class="content-bloc-text-button">
-                <a title="Remote Testing" href="/"
-                  ><button name="Remote Testing" class="button-text-content">
-                    <div class="content-button-text-content">Découvrir nos services</div>
-                  </button></a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-two-column">
-      <div class="dontknow1">
-        <div class="content-video-text">
-          <div class="dontknow2 row-reverse">
-            <div class="content-video">
-              <div class="content-image">
-                <img
-                  src="https://images.unsplash.com/photo-1587127936972-ebdd135de438?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2027&q=80"
-                  alt="Maximilien Langonier développeur créatif"
-                  class="hDwyTD"
-                />
-              </div>
-            </div>
-            <div class="content-bloc-text">
-              <div class="content-bloc-text-title">
-                <h2 class="content-bloc-text-title-h2">04. Site internet</h2>
-              </div>
-              <p class="content-bloc-text-p">
-                Notre force ? Concevoir des sites internets esthétiques, rapides et ergonomiques. Sur lesquels vous et
-                vos équipes seront autonomes pour gérer votre contenu.
-              </p>
-              <div class="content-bloc-text-button">
-                <a title="Remote Testing" href="/"
-                  ><button name="Remote Testing" class="button-text-content">
-                    <div class="content-button-text-content">Découvrir nos services</div>
-                  </button></a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <section id="DatoCmsSHeadline-11960556-en">
       <span id="services"></span>
       <div class="sc-bdfBwQ UElzp Box-cYgLTd dTLTVs">
@@ -192,34 +70,275 @@
                 font-size="1"
                 font-weight="500"
               >
-                Nos dernières réalisations
+                Les derniers projets qui nous été confiés
               </h2>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <SliderHomepage />
-    <section class="collaborate">
-      <span class="collaborate-first-word">Un projet?</span>
-      <div class="arrow-contact">
-        <svg class="svg-max" viewBox="0 0 337.21 194.22" preserveAspectRatio="none">
-          <path
-            d="M214.1,38.06c-36.79-5.14-69.86-2.83-98.28,6.86A147.59,147.59,0,0,0,56.67,82.21a153.93,153.93,0,0,0-33,51.8L10.47,107.45,3.31,111l16.11,32.34,3.26,7.22L61.55,133l-3.29-7.29L30.73,138.17a147,147,0,0,1,32-50.67,139.8,139.8,0,0,1,56-35.09C145.81,43.2,177.56,41,213,46l4,.55,1.1-7.92Z"
-            data-svg-origin="67.7470025062561 69.94620056152343"
-          ></path>
-          <path
-            id="path"
-            stroke-width="8px"
-            d="M148.42,36.08C127.27,39.66,104,47.64,82.5,64.3A149.62,149.62,0,0,0,63.28,82.18"
-          ></path>
-        </svg>
+    <div>
+      <SliderHomepage />
+    </div>
+
+    <section class="whatwedo">
+      <div class="content">
+        <h2>Ce que nous pouvons vous apporter</h2>
+        <p class="main-intro">
+          Notre objectif est de transformer les gens en amateurs de marques. Nous suivons l'approche "digital-first".
+          Des expériences numériques convaincantes résultent d'une marque bien définie. Grâce à nos outils, nous créons
+          des sites web de marque, des applications et des canaux de médias sociaux qui convertissent, que leur objectif
+          soit l'information, le commerce électronique, le divertissement ou la communication.
+        </p>
+        <div class="content-accordion">
+          <h3>
+            <button v-on:click="toggleStrategy"><span class="accordion-more">+ </span>Stratégie</button>
+          </h3>
+          <div class="tags" v-show="showStrategy">
+            <div>
+              <p class="tag-intro">
+                Découverte de votre histoire, de vos valeurs et de vos objectifs afin d’élaborer ensemble des stratégies
+                - adaptées et efficaces - appuyées par le numérique.
+              </p>
+              <span class="tag">Analytics</span><span class="tag">Consulting</span>
+              <span class="tag">User Research</span><span class="tag">Innovation &amp; Ideation</span>
+              <span class="tag">Business Integration</span><span class="tag">Content Strategy</span>
+              <span class="tag">Service Design</span><span class="tag">SEO Strategy</span>
+            </div>
+          </div>
+          <hr class="service-line"/>
+        </div>
+        <div class="content-accordion">
+          <h3>
+            <button v-on:click="toggleDesign"><span class="accordion-more">+ </span>Design</button>
+          </h3>
+          <div class="tags" v-show="showDesign">
+            <p class="tag-intro">
+              Nos regards créatifs, toujours à l'affût des aspirations du moment, nous permettent de définir des
+              positionnements identitaires, de repenser votre logo, de redéfinir votre charte graphique. Tout en
+              déclinant ces choix pour vos produits numériques.
+            </p>
+            <div>
+              <span class="tag">Analytics</span><span class="tag">Consulting</span>
+              <span class="tag">User Research</span><span class="tag">Innovation &amp; Ideation</span>
+              <span class="tag">Business Integration</span><span class="tag">Content Strategy</span>
+              <span class="tag">Service Design</span><span class="tag">SEO Strategy</span>
+            </div>
+          </div>
+          <hr class="service-line"/>
+        </div>
+        <div class="content-accordion">
+          <h3>
+            <button v-on:click="toggleDev"><span class="accordion-more">+ </span>Création de site internet</button>
+          </h3>
+          <div class="tags" v-show="showDev">
+            <div>
+              <span class="tag">CMS</span><span class="tag">Nuxt JS</span><span class="tag">Shopify</span
+              ><span class="tag">Nom de domaine</span> <span class="tag">Landing page</span>
+            </div>
+          </div>
+          <hr class="service-line"/>
+        </div>
+        <div class="content-accordion">
+          <h3>
+            <button v-on:click="toggleConsulting">
+              <span class="accordion-more">+ </span>Conseil et accompagnement
+            </button>
+          </h3>
+          <div class="tags" v-show="showConsulting">
+            <div>
+              <span class="tag">Analytics</span><span class="tag">Consulting</span>
+              <span class="tag">User Research</span><span class="tag">Innovation &amp; Ideation</span>
+              <span class="tag">Business Integration</span><span class="tag">Content Strategy</span>
+              <span class="tag">Service Design</span><span class="tag">SEO Strategy</span>
+            </div>
+          </div>
+          <hr class="service-line"/>
+        </div>
+
+        <!-- <div class="content-accordion">
+          <h3>
+            <button v-on:click="toggleStrategy"><span>+</span> Design</button>
+          </h3>
+          <transition
+            name="accordion"
+            v-on:before-enter="beforeEnter"
+            v-on:enter="enter"
+            v-on:before-leave="beforeLeave"
+            v-on:leave="leave"
+          >
+            <div class="tags" v-show="showStrategy">
+              <div>
+                <span class="tag">Analytics</span><span class="tag">Consulting</span>
+                <span class="tag">User Research</span><span class="tag">Innovation &amp; Ideation</span>
+                <span class="tag">Business Integration</span><span class="tag">Content Strategy</span>
+                <span class="tag">Service Design</span><span class="tag">SEO Strategy</span>
+              </div>
+
+              <hr class="service-line"/>
+            </div>
+          </transition>
+        </div> -->
       </div>
-      <span class="collaborate-second-word"
-        >Contactez-nous!
-        <hr
-      /></span>
     </section>
+    <div class="test" v-observe-visibility="visibilityChanged">
+      <!-- <section>
+        <section id="DatoCmsSHeadline-11960556-en">
+          <span id="services"></span>
+          <div class="sc-bdfBwQ UElzp Box-cYgLTd dTLTVs">
+            <div class="sc-dlfnbm gQsQBB">
+              <div class="sc-hKgILt gALUoe">
+                <div class="sc-eCssSg dIcDaN">
+                  <h2 class="section-title panel">Une palette pluridisciplinaire au service de vos projets</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section> -->
+        <!-- 
+      <section class="section-two-column">
+        <div class="dontknow1">
+          <div class="content-video-text">
+            <div class="dontknow2">
+              <div class="content-video">
+                <div class="content-image">
+                  <img
+                    src="https://www.datocms-assets.com/38511/1611231359-01-testanywhre-anytimeposter.jpg"
+                    alt="Maximilien Langonier développeur créatif"
+                    class="hDwyTD"
+                  />
+                </div>
+              </div>
+              <div class="content-bloc-text">
+                <div class="content-bloc-text-title">
+                  <h2 class="content-bloc-text-title-h2">01. Stratégie</h2>
+                </div>
+                <p class="content-bloc-text-p">
+                  Découverte de votre histoire, de vos valeurs et de vos objectifs afin d’élaborer ensemble des
+                  stratégies - adaptées et efficaces - appuyées par le numérique.
+                </p>
+                <div class="content-bloc-text-button">
+                  <a title="Remote Testing" href="/"
+                    ><button name="Remote Testing" class="button-text-content">
+                      <div class="content-button-text-content">Découvrir nos services</div>
+                    </button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-two-column">
+        <div class="dontknow1">
+          <div class="content-video-text">
+            <div class="dontknow2 row-reverse">
+              <div class="content-video">
+                <div class="content-image">
+                  <img
+                    src="https://studioplastac.fr/v3/wp-content/uploads/2020/12/gloria-plastac-papeterie-06.jpg"
+                    alt="Maximilien Langonier développeur créatif"
+                    class="hDwyTD"
+                  />
+                </div>
+              </div>
+              <div class="content-bloc-text">
+                <div class="content-bloc-text-title">
+                  <h2 class="content-bloc-text-title-h2">02. Design</h2>
+                </div>
+                <p class="content-bloc-text-p">
+                  Nos regards créatifs, toujours à l'affût des aspirations du moment, nous permettent de définir des
+                  positionnements identitaires, de repenser votre logo, de redéfinir votre charte graphique. Tout en
+                  déclinant ces choix pour vos produits numériques.
+                </p>
+                <div class="content-bloc-text-button">
+                  <a title="Remote Testing" href="/"
+                    ><button name="Remote Testing" class="button-text-content">
+                      <div class="content-button-text-content">Découvrir notre démarche UX</div>
+                    </button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-two-column">
+        <div class="dontknow1">
+          <div class="content-video-text">
+            <div class="dontknow2">
+              <div class="content-video">
+                <div class="content-image">
+                  <img
+                    src="https://www.5-5.paris/public_data/savoir/1518618584/40-27/2048/studio55-savoirfaire-identite-siteinternet2.jpg"
+                    alt="Maximilien Langonier développeur créatif"
+                    class="hDwyTD"
+                  />
+                </div>
+              </div>
+              <div class="content-bloc-text">
+                <div class="content-bloc-text-title">
+                  <h2 class="content-bloc-text-title-h2">03. Contenu</h2>
+                </div>
+                <p class="content-bloc-text-p">
+                  Comment mettre en avant vos produits, votre lieu ou vos équipes sans du contenu à la hauteur ? Nous
+                  collaborons avec des photographes professionnels capables de mettre en lumière tous vos projets.
+                </p>
+                <div class="content-bloc-text-button">
+                  <a title="Remote Testing" href="/"
+                    ><button name="Remote Testing" class="button-text-content">
+                      <div class="content-button-text-content">Découvrir nos services</div>
+                    </button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-two-column">
+        <div class="dontknow1">
+          <div class="content-video-text">
+            <div class="dontknow2 row-reverse">
+              <div class="content-video">
+                <div class="content-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1587127936972-ebdd135de438?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2027&q=80"
+                    alt="Maximilien Langonier développeur créatif"
+                    class="hDwyTD"
+                  />
+                </div>
+              </div>
+              <div class="content-bloc-text">
+                <div class="content-bloc-text-title">
+                  <h2 class="content-bloc-text-title-h2">04. Site internet</h2>
+                </div>
+                <p class="content-bloc-text-p">
+                  Notre force ? Concevoir des sites internets esthétiques, rapides et ergonomiques. Sur lesquels vous et
+                  vos équipes seront autonomes pour gérer votre contenu.
+                </p>
+                <div class="content-bloc-text-button">
+                  <a title="Remote Testing" href="/"
+                    ><button name="Remote Testing" class="button-text-content">
+                      <div class="content-button-text-content">Découvrir nos services</div>
+                    </button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      </section>
+
+      <section class="collaborate">
+        <p class="collaborate-first-word">Un projet? <span class="collaborate-second-word"> Parlons-en!</span></p>
+        <p></p>
+      </section>
+    </div>
   </div>
 </template>
 
@@ -243,11 +362,59 @@ export default {
   data: function () {
     return {
       scrollPosition: null,
+      showStrategy: false,
+      showDesign: false,
+      showDev: false,
+      showConsulting: false,
     }
   },
   methods: {
+    // updateScroll() {
+    //   this.scrollPosition = window.scrollY
+    //   console.log(this.scrollPosition)
+    // },
+    lazyLoadImage(e) {
+      let media = e.target.parentNode.querySelectorAll('[data-manual-lazy]')
+      ;[...media].forEach((m) => this.$lazyLoad(m))
+    },
+    visibilityChanged(isVisible, entry) {
+      let header = document.querySelector('.test')
+      if ((header.isVisible = isVisible)) {
+        header.classList.add('v-toolbar--bgchange')
+      }
+    },
     updateScroll() {
       this.scrollPosition = window.scrollY
+    },
+    toggleStrategy: function () {
+      this.showStrategy = !this.showStrategy
+    },
+    toggleDesign: function () {
+      this.showDesign = !this.showDesign
+    },
+    toggleDev: function () {
+      this.showDev = !this.showDev
+    },
+    toggleConsulting: function () {
+      this.showConsulting = !this.showConsulting
+    },
+    // enter: function(el, done) {
+    //   $(el).slideDown(150, done);
+    // },
+    // leave: function(el, done) {
+    //   $(el).slideUp(150, done);
+    // },
+    beforeEnter: function (el) {
+      el.style.height = '0'
+    },
+    enter: function (el) {
+      el.style.height = el.scrollHeight + 'px'
+    },
+    beforeLeave: function (el) {
+      el.style.height = el.scrollHeight + 'px'
+    },
+    leave: function (el) {
+      el.style.height = '0'
     },
   },
   mounted() {
@@ -256,11 +423,111 @@ export default {
   components: {
     SliderHomepage,
   },
+  destroyed() {
+    window.removeEventListener('scroll', this.updateScroll)
+  },
 }
 </script>
 
 <style scoped>
+/* .v-toolbar--bgchange {
+  background: rgb(137, 186, 209);
+  color: rgb(141, 62, 52);
+  transition: background-color 3s ease;
+} */
+section {
+  margin-bottom: 10%;
+}
+section.whatwedo {
+  max-width: 1920px;
+  margin: 0px auto 8em;
+  width: calc(100% - (3.6923rem + 6.4103vw));
+  display: flex;
+  flex-direction: column;
+  padding-bottom: calc(1.8462rem + 3.2051vw);
+}
+
+section.whatwedo .content {
+  text-align: left;
+  margin-left: 16.66%;
+  width: 66.66%;
+  box-sizing: border-box;
+  padding: calc(0.5385rem + 1.2821vw);
+  -webkit-box-flex: unset;
+  flex-grow: unset;
+}
+
+section.whatwedo h2 {
+  font-family: 'Kobe';
+  letter-spacing: 0.2px;
+  font-size: calc(1.3231rem + 2.4359vw);
+  line-height: 1.4;
+  margin: 0px 0px 0.5em -0.05em;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0.5em;
+  margin-left: -0.05em;
+}
+
+section.whatwedo p.main-intro {
+  margin-top: 2em;
+  margin-bottom: 1.5em;
+  font-size: calc(1.1231rem + 0.7692vw);
+  line-height: calc(2.2308rem + 1.0256vw);
+}
+
+section.whatwedo p.tag-intro {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+section.whatwedo h3 {
+  position: relative;
+  font-size: 3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+section.whatwedo button {
+  font-size: 2rem;
+  border: none;
+  background-image: initial;
+  background-color: transparent;
+  color: inherit;
+  border-color: initial;
+  outline-color: initial;
+  margin: 0px;
+  padding: 0px;
+  outline: 0px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
+  border: 1px solid;
+  border-radius: 6em;
+  padding: 0.6em 1.6em;
+  margin: 0px 0.6em 1em 0px;
+  transition: all 0.6s ease 0s;
+  white-space: nowrap;
+}
+
+section.whatwedo .tags {
+  margin-bottom: 2em;
+  margin-top: 2em;
+  transition: ease-in 2s;
+}
+
+.accordion-more {
+}
+
 h1 {
+  font-family: Kobe, sans-serif;
   font-size: 10rem;
 }
 
@@ -367,7 +634,6 @@ img.hDwyTD {
 
 h2.content-bloc-text-title-h2 {
   line-height: 1.2;
-  font-family: Roobert, sans-serif;
   text-transform: none;
   overflow: unset;
   white-space: unset;
@@ -378,7 +644,6 @@ p.content-bloc-text-p {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
-  font-family: 'Public Sans', sans-serif;
   text-transform: none;
   overflow: unset;
   white-space: unset;
@@ -393,7 +658,6 @@ p.content-bloc-text-p {
 
 .button-text-content {
   display: inline-flex;
-  font-family: 'Public Sans', sans-serif;
   -webkit-box-align: center;
   align-items: center;
   font-weight: 600;
@@ -444,6 +708,7 @@ section.leader-homepage {
   justify-content: center;
   align-self: start;
   background-color: #1e344a;
+  color: white;
 }
 
 .leader-content {
@@ -498,11 +763,28 @@ section.leader-homepage {
   cursor: pointer;
 }
 
+h2.section-title {
+  font-family: Kobe, sans-serif;
+  padding: 20px;
+  letter-spacing: 0.2px;
+  font-size: 6rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+hr.service-line {
+  border: 1px solid;
+}
+
 @media (min-width: 1600px) {
   /* .UElzp {
     margin-top: 160px;
     margin-bottom: 160px;
   } */
+
+  section {
+    padding: 60px;
+  }
 
   .gQsQBB {
     width: 132rem;
@@ -516,6 +798,10 @@ section.leader-homepage {
 
   .section-title {
     font-size: 4.4rem;
+  }
+
+  .collaborate-first-word {
+    font-size: 6rem;
   }
 }
 
@@ -554,6 +840,14 @@ section.leader-homepage {
     flex-basis: 66.6667%;
     max-width: 66.6667%;
     display: block;
+  }
+
+  .collaborate-first-word {
+    font-size: 6rem;
+  }
+
+  .collaborate-second-word {
+    font-size: 6rem;
   }
 }
 
@@ -608,6 +902,37 @@ section.leader-homepage {
     font-size: 24px;
   }
 
+  h2.section-title {
+    font-size: 3rem;
+  }
+
+  h2.section-title.panel {
+    height: auto !important;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  .collaborate-first-word {
+    font-size: 3.2em;
+  }
+
+  .collaborate-second-word {
+    font-size: 3.2em;
+  }
+
+  section.whatwedo .content {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  section.whatwedo p.main-intro {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
   .keyword {
     font-size: 14px;
   }
@@ -622,8 +947,12 @@ section.leader-homepage {
 }
 
 section.collaborate {
-  text-align: left;
-  padding: 60px;
+  text-align: center;
+  word-break: keep-all;
+  padding: 20px;
+  letter-spacing: 0.2px;
+  font-size: 6rem;
+  margin-bottom: 0;
 }
 
 .arrow-contact {
@@ -632,12 +961,19 @@ section.collaborate {
 }
 
 .svg-max {
-  fill: black;
   width: 180px;
   pointer-events: none;
   bottom: -10px;
   right: 20px;
   -webkit-animation: rotation 4s infinite linear;
+}
+
+.light-mode .svg-max {
+  fill: black;
+}
+
+.dark-mode .svg-max {
+  fill: white;
 }
 
 @-webkit-keyframes rotation {
@@ -652,14 +988,10 @@ section.collaborate {
   }
 }
 
-.collaborate-first-word {
-  font-size: 10rem;
-}
-
 .collaborate-second-word {
-  font-size: 12rem;
   font-weight: bold;
   font-family: 'Kobe';
+  letter-spacing: 0.2px;
 }
 
 /* Setting fade transition and default settings */
@@ -677,10 +1009,44 @@ body {
 }
 
 .change_color {
-  background-color: rgb(8, 77, 42);
-  -webkit-transition: background-color 0.5s ease-in-out;
-  -o-transition: background-color 0.5s ease-in-out;
-  transition: background-color 0.5s ease-in-out;
-  will-change: background-color, opacity;
+  background-color: rgb(247, 247, 234);
+  color: rgb(13, 102, 167);
+  -webkit-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+/* marquee slider */
+
+.marquee-container {
+  max-width: 100%;
+  overflow: hidden;
+  text-transform: uppercase;
+  z-index: 1;
+  top: 0;
+  position: absolute;
+  background-color: rgb(65, 109, 128);
+  color: rgb(148, 217, 247);
+}
+
+.marquee-wrapper {
+  width: 100vw;
+  white-space: nowrap;
+}
+
+.marquee-text {
+  font-size: 18px;
+  display: inline-block;
+  will-change: transform;
+  animation: scroll 60s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
 }
 </style>
