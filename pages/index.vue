@@ -21,7 +21,7 @@
             <span class="keyword">développement</span>
             <span class="keyword">performance</span>
           </div>
-          <a href="#services">
+          <a href="#content" aria-label="Anchor to top section">
             <div class="hero-scroll-container">
               <span class="scroll">Scroll</span>
             </div>
@@ -47,6 +47,7 @@
         </div>
       </div>
     </section>
+    <span id="content"></span>
     <section class="whatwedo" @scroll="updateScroll" @mouseenter="lazyLoadImage">
       <div class="content">
         <!-- <h2>Bonjour 👋</h2> -->
@@ -60,7 +61,7 @@
     </section>
 
     <section id="DatoCmsSHeadline-11960556-en" ref="my_box_a">
-      <span id="services"></span>
+      
       <div class="sc-bdfBwQ UElzp Box-cYgLTd dTLTVs">
         <div class="sc-dlfnbm gQsQBB">
           <div class="sc-hKgILt gALUoe">
@@ -359,11 +360,11 @@ export default {
         homeContent: await require(`~/assets/content/site/homepage.json`),
       }
   },
-  head() {
-    return {
-      script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
-    }
-  },
+  // head() {
+  //   return {
+  //     script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
+  //   }
+  // },
   data: function () {
     return {
       scrollPosition: null,

@@ -76,7 +76,6 @@ export default {
       banners: ['/slider-1.png', 'https://easol.com/images/homepage/testimonials/6.webp'],
       swiperOption: {
         slidesPerView: 'auto',
-        loop: true,
       },
     }
   },
@@ -84,9 +83,6 @@ export default {
 </script>
 
 <style >
-section.slider {
-}
-
 .swiper-container {
   position: relative;
   padding-left: 8.2vw;
