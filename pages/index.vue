@@ -5,7 +5,7 @@
         <div class="main-text">
           <h1 class="main-title">Studio Clax</h1>
           <h2 class="main-subtitle">{{ homeContent.intro }}</h2>
-          <img id="myVideo" src="~/static/placeholder-nice-min.png" />
+          <img id="myVideo" src="~/static/placeholder-nice-min.png" alt="Studio Clax - Création et développement de site internets à Nice" />
           <video autoplay muted loop id="myVideo">
             <source src="~/static/nice.mp4" type="video/mp4" />
           </video>
@@ -16,10 +16,10 @@
             <button class="button-text-content">{{ homeContent.buttonLabel }}</button>
           </a> -->
           <div class="keywords">
-            <span class="keyword">design</span>
-            <span class="keyword">expérience utilisateur</span>
+            <span class="keyword">stratégie</span>
+            <span class="keyword">désign</span>
             <span class="keyword">développement</span>
-            <span class="keyword">référencement</span>
+            <span class="keyword">performance</span>
           </div>
           <a href="#services">
             <div class="hero-scroll-container">
@@ -51,15 +51,15 @@
       <div class="content">
         <!-- <h2>Bonjour 👋</h2> -->
         <p class="main-intro">
-          Notre objectif est de transformer les gens en amateurs de marques. Nous suivons l'approche "digital-first".
-          Des expériences numériques convaincantes résultent d'une marque bien définie. Grâce à nos outils, nous créons
-          des sites web de marque, des applications et des canaux de médias sociaux qui convertissent, que leur objectif
-          soit l'information, le commerce électronique, le divertissement ou la communication.
+          Nous sommes une agence numérique établie à Nice, dans le sud de la France. 
+          Nous sommes spécialisés dans le développement de solutions numériques basées sur une approche intégrant stratégie, design et technologie.
+          
+          Du début jusqu’à la mise en ligne, nos projets sont le fruit d’une étroite collaboration entre vous, développeurs, designers et stratèges numériques..
         </p>
       </div>
     </section>
 
-    <section id="DatoCmsSHeadline-11960556-en">
+    <section id="DatoCmsSHeadline-11960556-en" ref="my_box_a">
       <span id="services"></span>
       <div class="sc-bdfBwQ UElzp Box-cYgLTd dTLTVs">
         <div class="sc-dlfnbm gQsQBB">
@@ -100,10 +100,10 @@
                 Découverte de votre histoire, de vos valeurs et de vos objectifs afin d’élaborer ensemble des stratégies
                 - adaptées et efficaces - appuyées par le numérique.
               </p>
-              <span class="tag">Analytics</span><span class="tag">Consulting</span>
-              <span class="tag">User Research</span><span class="tag">Innovation &amp; Ideation</span>
-              <span class="tag">Business Integration</span><span class="tag">Content Strategy</span>
-              <span class="tag">Service Design</span><span class="tag">SEO Strategy</span>
+              <span class="tag">Stratégie numérique</span><span class="tag">Stratégie de contenu</span>
+              <span class="tag">Recherche Utilisateur</span><span class="tag">Atelier centré utilisateur</span><span class="tag">Aterlier d'innovation &amp; d'idéation</span>
+              <span class="tag">Positionnement de marque</span>
+              <span class="tag">Définition de KPI</span><span class="tag">Audit</span><span class="tag">Roadmap</span>
             </div>
           </div>
           <hr class="service-line"/>
@@ -119,22 +119,28 @@
               déclinant ces choix pour vos produits numériques.
             </p>
             <div>
-              <span class="tag">Analytics</span><span class="tag">Consulting</span>
-              <span class="tag">User Research</span><span class="tag">Innovation &amp; Ideation</span>
-              <span class="tag">Business Integration</span><span class="tag">Content Strategy</span>
-              <span class="tag">Service Design</span><span class="tag">SEO Strategy</span>
+              <span class="tag">Identité visuelle</span>
+              <span class="tag">Charte graphique</span><span class="tag">Création de logo</span><span class="tag">Mise en valeur de vos espaces &amp; produits</span>
+              
+              <span class="tag">Supports de communication</span><span class="tag">Illustration</span><span class="tag">Animation 2D &amp; 3D</span>
             </div>
           </div>
           <hr class="service-line"/>
         </div>
         <div class="content-accordion">
           <h3>
-            <button v-on:click="toggleDev"><span class="accordion-more">+ </span>Création de site internet</button>
+            <button v-on:click="toggleDev"><span class="accordion-more">+ </span>Création de site web &amp; mobile</button>
           </h3>
           <div class="tags" v-show="showDev">
             <div>
-              <span class="tag">CMS</span><span class="tag">Nuxt JS</span><span class="tag">Shopify</span
-              ><span class="tag">Nom de domaine</span> <span class="tag">Landing page</span>
+              <span class="tag">Design d'interface (UI)</span><span class="tag">Expérience utilisateur (UX)</span><span class="tag">Prototypage</span><span class="tag">Wireframing</span><span class="tag">Création de boutique e-commerce (Shopify)</span
+              ><span class="tag">Système de gestion de contenu (CMS)
+
+</span><span class="tag">Développement Back-end
+
+</span><span class="tag">Développement Front-end
+
+</span><span class="tag">Landing page</span><span class="tag">Portfolio</span>
             </div>
           </div>
           <hr class="service-line"/>
@@ -142,15 +148,14 @@
         <div class="content-accordion">
           <h3>
             <button v-on:click="toggleConsulting">
-              <span class="accordion-more">+ </span>Conseil et accompagnement
+              <span class="accordion-more">+ </span>Performance, conseil et accompagnement
             </button>
           </h3>
           <div class="tags" v-show="showConsulting">
             <div>
-              <span class="tag">Analytics</span><span class="tag">Consulting</span>
-              <span class="tag">User Research</span><span class="tag">Innovation &amp; Ideation</span>
-              <span class="tag">Business Integration</span><span class="tag">Content Strategy</span>
-              <span class="tag">Service Design</span><span class="tag">SEO Strategy</span>
+              <span class="tag">Optimisation en ligne (SEO)</span><span class="tag">Data Analyse</span><span class="tag">Optimisation du taux de conversion (CRO)</span>
+              <span class="tag">Recommendation produit</span><span class="tag">Campagne social média</span>
+              <span class="tag">Gestion de campagne adwords</span><span class="tag">Gestion du nom de domaine</span> <span class="tag">Formation &amp; accompagnement</span> 
             </div>
           </div>
           <hr class="service-line"/>
@@ -181,7 +186,7 @@
         </div> -->
       </div>
     </section>
-    <div class="test" v-observe-visibility="visibilityChanged">
+    <div class="test" v-observe-visibility="visibilityChanged" >
       <!-- <section>
         <section id="DatoCmsSHeadline-11960556-en">
           <span id="services"></span>
@@ -458,7 +463,7 @@ section.whatwedo .content {
 }
 
 section.whatwedo h2 {
-  font-family: 'Kobe';
+  font-family: 'Kobe', sans-serif;
   letter-spacing: 0.2px;
   font-size: calc(1.3231rem + 2.4359vw);
   line-height: 1.4;
@@ -990,7 +995,7 @@ section.collaborate {
 
 .collaborate-second-word {
   font-weight: bold;
-  font-family: 'Kobe';
+  font-family: 'Kobe', sans-serif;
   letter-spacing: 0.2px;
 }
 

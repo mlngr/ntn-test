@@ -1,15 +1,20 @@
 <template >
   <!-- <div class="container" :class="{ change_color: scrollPosition > 1300 && scrollPosition < 5000 }"> -->
-  <div class="container" :class="{ change_color: scrollPosition > 1300, change_color_2: scrollPosition > 4000 }">
+  <div
+    class="container"
+    :class="{ change_color: scrollPositionRelative < 80, change_color_2: scrollPositionRelative < 20 }"
+  >
     <Header />
     <ColorModePicker />
     <nuxt />
     <Footer />
-    <h3 style="position: fixed; top: 0; z-index: 100000">
+    <!-- <h3 style="position: fixed; top: 0; z-index: 100000">
       Width: {{ window.width }} px<br />
-      Width % : {{ scrollPositionRelative }} px<br />
-      Height: {{ window.height }} px
-    </h3>
+      Height: {{ window.height }} px<br />
+      % : {{ scrollPositionRelative }} px<br />
+      Height site: {{ site.height }} px<br />
+      width site: {{ site.width }} px
+    </h3> -->
   </div>
 </template>
 
@@ -31,6 +36,10 @@ export default {
         width: null,
         height: null,
       },
+      site: {
+        width: null,
+        height: null,
+      },
       scrollPositionRelative: null,
     }
   },
@@ -41,18 +50,21 @@ export default {
     handleResize() {
       this.window.width = window.innerWidth
       this.window.height = window.innerHeight
+      this.site.width = document.body.scrollWidth
+      this.site.height = document.body.scrollHeight
     },
     scrollToBottom() {
-      this.scrollPositionRelative = window.innerWidth - window.scrollY
-      console.log(this.scrollPositionRelative)
+      this.scrollPositionRelative = ((document.body.scrollHeight - window.scrollY) / document.body.scrollHeight) * 100
     },
   },
   mounted() {
     window.addEventListener('scroll', this.updateScroll)
+    window.addEventListener('scroll', this.scrollToBottom)
     window.addEventListener('resize', this.handleResize)
   },
   destroyed() {
     window.removeEventListener('scroll', this.updateScroll)
+    window.removeEventListener('scroll', this.scrollToBottom)
     window.removeEventListener('resize', this.handleResize)
   },
 }
