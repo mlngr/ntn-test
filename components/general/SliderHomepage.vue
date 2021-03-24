@@ -209,15 +209,33 @@ img.ls-is-cached:hover {
 
 @media (min-width: 640px) and (max-width: 899px) {
   .wayfx-slide-content img {
-    height: 400px;
+    height: 450px;
     width: 300px;
+  }
+
+  .swiper-container {
+    padding-left: 0px;
+  }
+
+  .featured-project__title {
+    margin-top: 0.25rem;
+    font-size: 1.25rem;
   }
 }
 
 @media (min-width: 0px) and (max-width: 639px) {
   .wayfx-slide-content img {
-    height: 300px;
-    width: 200px;
+    height: 400px;
+    width: 250px;
+  }
+
+  .swiper-container {
+    padding-left: 0px;
+  }
+
+  .featured-project__title {
+    margin-top: 0.25rem;
+    font-size: 1rem;
   }
 }
 </style>

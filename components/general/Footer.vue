@@ -4,8 +4,8 @@
     <div class="footer-content">
       <p class="footer-text">© 2021</p>
       <p class="footer-text">design et développement</p>
-      <p class="footer-text">Nice, France</p>
-      <p><a class="footer-text" href="mailto:m.langonier@gmail.com">contact</a></p>
+      <p class="footer-text">Nice, Montreal, Paris</p>
+      <p><a class="footer-text" href="mailto:hey@studioclax.com">contact</a></p>
     </div>
   </footer>
 </template>
@@ -25,6 +25,8 @@ export default {
   width: -webkit-fill-available;
   z-index: 1;
   text-align: center;
+  font-family: 'Kobe', sans-serif;
+  letter-spacing: 0.2px;
 }
 
 .footer-content {

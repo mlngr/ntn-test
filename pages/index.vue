@@ -362,7 +362,7 @@
 
       <section class="collaborate">
         <p class="collaborate-first-word">Un projet ? Parlons-en !</span></p>
-        <p>hey@studioclax.com</p>
+        <p class="email">hey@studioclax.com</p>
       </section>
     </div>
   </div>
@@ -807,6 +807,11 @@ h2.section-title {
 
 hr.service-line {
   border: 1px solid;
+  color: inherit;
+}
+
+.email {
+  font-weight: 200;
 }
 
 @media (min-width: 1600px) {
@@ -836,9 +841,17 @@ hr.service-line {
   .collaborate-first-word {
     font-size: 6rem;
   }
+
+  .main-subtitle {
+    font-weight: 200;
+  }
 }
 
 @media (min-width: 1024px) and (max-width: 1599px) {
+  .main-subtitle {
+    font-weight: 200;
+  }
+
   .content-video-text {
     width: 1320px;
   }
@@ -892,6 +905,10 @@ hr.service-line {
 }
 
 @media (min-width: 640px) and (max-width: 899px) {
+  .tag {
+    font-size: 1.25rem;
+    white-space: normal;
+  }
   .content-video {
     flex-basis: 80%;
     max-width: 80%;
@@ -905,9 +922,24 @@ hr.service-line {
   .content-bloc-text {
     font-size: 24px;
   }
+
+  .holder {
+    display: none;
+  }
 }
 
 @media (min-width: 0px) and (max-width: 639px) {
+  .email {
+    font-size: 1.75rem;
+  }
+  .tag {
+    font-size: 1rem;
+    white-space: normal;
+  }
+  .holder {
+    display: none;
+  }
+
   .content-video {
     flex-basis: 90%;
     max-width: 90%;
