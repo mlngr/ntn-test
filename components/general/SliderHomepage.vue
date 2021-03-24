@@ -5,11 +5,12 @@
         <div class="wayfx-slide-content">
           <a href="https://crestofficiel.com/" target="_blank">
             <img
-              src="https://cdn.shopify.com/s/files/1/0476/5945/0520/t/7/assets/21-12-min.jpg?v=16316368296045814457"
+              src="~/static/crest.png"
               alt="Studio Clax - Création et développement de site internets à Nice - Crest officiel - Mode"
               width="500px"
               height="600px"
               v-lazy-load
+              class="swiper-lazy"
             />
           </a>
           <h2 class="featured-project__title">Crest Officiel</h2>
@@ -18,9 +19,39 @@
       </swiper-slide>
       <swiper-slide class="swiper-slide">
         <div class="wayfx-slide-content">
+          <a href="http://alga.design/" target="_blank">
+            <img
+              src="~/static/alga.png"
+              alt="Studio Clax - Création et développement de site internets à Nice - Alga Samuel Tomatis Design"
+              width="500px"
+              height="600px"
+              v-lazy-load
+            />
+          </a>
+          <h2 class="featured-project__title">Samuel Tomatis - Alga</h2>
+          <p class="featured-project__description">Création du site internet / Stratégie digitale</p>
+        </div>
+      </swiper-slide>
+      <swiper-slide class="swiper-slide">
+        <div class="wayfx-slide-content">
+          <a href="https://lequipe.fr" target="_blank">
+            <img
+              src="~/static/lequipe.png"
+              alt="Studio Clax - Création et développement de site internets à Nice - KOPLESH - Concerts, agenda paris, musique indé"
+              width="500px"
+              height="600px"
+              v-lazy-load
+            />
+            <h2 class="featured-project__title">L'Equipe</h2>
+            <p class="featured-project__description">Création d'un dashboard produit</p>
+          </a>
+        </div>
+      </swiper-slide>
+      <swiper-slide class="swiper-slide">
+        <div class="wayfx-slide-content">
           <a href="https://koplesh.co/" target="_blank">
             <img
-              src="https://koplesh.co/3.jpg"
+              src="~/static/koplesh.png"
               alt="Studio Clax - Création et développement de site internets à Nice - KOPLESH - Concerts, agenda paris, musique indé"
               width="500px"
               height="600px"
@@ -46,21 +77,6 @@
           </a>
         </div>
       </swiper-slide>
-      <swiper-slide class="swiper-slide">
-        <div class="wayfx-slide-content">
-          <a href="http://alga.design/" target="_blank">
-            <img
-              src="https://images.squarespace-cdn.com/content/v1/59875f18d482e9f06c7e959d/1502047829558-Y3ENXTPQYSMMYBSOE0OT/ke17ZwdGBToddI8pDm48kLIj3bb_uLOihttx7hjsPSV7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0lqfkVpRp1g_2L-WsTQRP4IUeQvxhQLxDj0GQzUQT21mzi2feheXFTkax-QWHoTYtA/DSC_3378.jpg"
-              alt="Studio Clax - Création et développement de site internets à Nice - Alga Samuel Tomatis Design"
-              width="500px"
-              height="600px"
-              v-lazy-load
-            />
-          </a>
-          <h2 class="featured-project__title">Samuel Tomatis - Alga</h2>
-          <p class="featured-project__description">Création du site internet / Stratégie digitale</p>
-        </div>
-      </swiper-slide>
 
       <div class="swiper-button-prev" slot="button-prev"></div>
       <div class="swiper-button-next" slot="button-next"></div>
@@ -70,6 +86,8 @@
 
 <script>
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
+// import style (<= Swiper 5.x)
+import 'swiper/css/swiper.css'
 
 export default {
   name: 'SliderHomepage',
@@ -95,6 +113,10 @@ export default {
 </script>
 
 <style >
+.swiper-button-prev,
+.swiper-button-next {
+  color: #ffffff;
+}
 .slider {
 }
 .swiper-slide {

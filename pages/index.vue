@@ -68,7 +68,7 @@
         <p class="main-intro">
           Nous concevons des solutions numériques basées sur une approche intégrant stratégie, design, technologie et performance. Dès le départ du projet et jusqu’à la
           mise en ligne, notre ambition est de satisfaire au mieux vos attentes <i>- bien entendu -</i> mais surtout celles de
-          vos utilisateurs. Nous attachons également beaucoup d'importance à l'accompagnement, le conseil et à la formation afin de vous aider à atteindre vos objectifs.
+          vos utilisateurs. Nous attachons également beaucoup d'importance à l'accompagnement, le conseil et à la formation afin de vous aider à atteindre vos objectifs le plus rapidement possible.
         </p>
       </div>
     </section>
@@ -149,6 +149,9 @@
           </h3>
           <div class="tags" v-show="showDev">
             <div>
+                          <p class="tag-intro">
+              De l’optimisation du référencement naturel aux animations, notre CTO et son équipe front-end et back-end font de votre projet une réalité.
+            </p>
               <span class="tag">Design d'interface (UI)</span><span class="tag">Expérience utilisateur (UX)</span
               ><span class="tag">Prototypage</span><span class="tag">Wireframing</span
               ><span class="tag">Création de boutique e-commerce (Shopify)</span
@@ -362,7 +365,7 @@
 
       <section class="collaborate">
         <p class="collaborate-first-word">Un projet ? Parlons-en !</span></p>
-        <p class="email">hey@studioclax.com</p>
+        <p class="email"><a href="mailto:hey@studioclax.com">hey@studioclax.com</a></p>
       </section>
     </div>
   </div>
