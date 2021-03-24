@@ -8,8 +8,12 @@
     --bg-dark: #131313;
     --bg-light: #dadada;;
     font-family: sans-serif;
+    cursor: auto;
 } 
 
+a {
+    cursor: pointer;
+}
 @font-face {
     font-family: "Kobe";
     src: url(~assets/css/fonts/Kobe.otf) format("opentype");
@@ -215,7 +219,7 @@ nav {
     top: 0;
     right: 0;
     bottom: 0;
-    opacity: 0.35;
+    opacity: 0.05;
     background-color: #0c0c0c;
     transition: all .6s ease;
     z-index: -1;

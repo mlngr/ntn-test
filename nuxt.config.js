@@ -39,11 +39,11 @@ export default {
         content: SITE_INFO.sitedescription || process.env.npm_package_description || ''
       }
     ],
-    /*
     link: [
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400&display=swap'
+        href: 'https://fonts.gohttps://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500&display=swapogleapis.com/css2?family=Gilda+Display&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet'
       }
     ] // ? Imports the font 'Karla' and is optimized by the netlify plugin 'Subfont' */
   },
@@ -64,7 +64,7 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    { src: '@/plugins/vue-awesome-swiper.js', mode: 'client' },
+    { src: '@/plugins/vue-awesome-swiper.js', ssr: 'false' },
     { src: '@/plugins/vue-observe-visibility.client.js', mode: 'client' }
   ],
   /*

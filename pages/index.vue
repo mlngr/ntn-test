@@ -4,10 +4,16 @@
       <div class="leader-content">
         <div class="main-text">
           <h1 class="main-title">Studio Clax</h1>
-          <h2 class="main-subtitle">{{ homeContent.intro }}</h2>
-          <img id="myVideo" src="~/static/placeholder-nice.webp" alt="Studio Clax - Création et développement de site internets à Nice" />
+          <h2 class="main-subtitle">créateur de solutions numériques</h2>
+          <!-- <h2 class="main-subtitle">{{ homeContent.intro }}</h2> -->
+          <img
+            id="myVideo"
+            src="~/static/leader-placeholder.webp"
+            alt="Studio Clax —— Création et développement de site internets à Nice"
+          />
+
           <video autoplay muted loop id="myVideo">
-            <source src="~/static/nice.mp4" type="video/mp4" />
+            <source src="~/static/leader.mp4" type="video/mp4" />
           </video>
 
           <div class="holder"></div>
@@ -23,7 +29,7 @@
           </div>
           <a href="#content" aria-label="Anchor to top section">
             <div class="hero-scroll-container">
-              <span class="scroll">Scroll</span>
+              <span class="scroll custom-hover">Scroll</span>
             </div>
           </a>
         </div>
@@ -51,17 +57,23 @@
     <section class="whatwedo" @scroll="updateScroll" @mouseenter="lazyLoadImage">
       <div class="content">
         <!-- <h2>Bonjour 👋</h2> -->
+        <!-- <a
+          href="/projets"
+          id="custom-hover"
+          @mouseover="hover = true"
+          @mouseleave="hover = false"
+          :class="{ active: hover }"
+          >heyyyyyyyyyy</a
+        > -->
         <p class="main-intro">
-          Nous sommes une agence numérique établie à Nice, dans le sud de la France. 
-          Nous sommes spécialisés dans le développement de solutions numériques basées sur une approche intégrant stratégie, design et technologie.
-          
-          Du début jusqu’à la mise en ligne, nos projets sont le fruit d’une étroite collaboration entre vous, développeurs, designers et stratèges numériques..
+          Nous concevons des solutions numériques basées sur une approche intégrant stratégie, design, technologie et performance. Dès le départ du projet et jusqu’à la
+          mise en ligne, notre ambition est de satisfaire au mieux vos attentes <i>- bien entendu -</i> mais surtout celles de
+          vos utilisateurs. Nous attachons également beaucoup d'importance à l'accompagnement, le conseil et à la formation afin de vous aider à atteindre vos objectifs.
         </p>
       </div>
     </section>
 
     <section id="DatoCmsSHeadline-11960556-en" ref="my_box_a">
-      
       <div class="sc-bdfBwQ UElzp Box-cYgLTd dTLTVs">
         <div class="sc-dlfnbm gQsQBB">
           <div class="sc-hKgILt gALUoe">
@@ -78,18 +90,16 @@
         </div>
       </div>
     </section>
-    <div>
+    <section>
       <SliderHomepage />
-    </div>
+    </section>
 
     <section class="whatwedo">
       <div class="content">
         <h2>Ce que nous pouvons vous apporter</h2>
-        <p class="main-intro">
-          Notre objectif est de transformer les gens en amateurs de marques. Nous suivons l'approche "digital-first".
-          Des expériences numériques convaincantes résultent d'une marque bien définie. Grâce à nos outils, nous créons
-          des sites web de marque, des applications et des canaux de médias sociaux qui convertissent, que leur objectif
-          soit l'information, le commerce électronique, le divertissement ou la communication.
+        <p class="main-intro" style="opacity:0.8">
+          Définition de votre stratégie numérique, création d'une identité visuelle, conception et développement de solutions innovantes adaptées à vos besoins ou encore amélioration de votre référencement. Voici les principaux domaines où nous pouvons apporter notre expertise.
+          Du lancement d'un nouveau projet à l'amélioration d'un produit numérique déjà existant, nous avons les compétences pour vous accompagner. 
         </p>
         <div class="content-accordion">
           <h3>
@@ -102,12 +112,13 @@
                 - adaptées et efficaces - appuyées par le numérique.
               </p>
               <span class="tag">Stratégie numérique</span><span class="tag">Stratégie de contenu</span>
-              <span class="tag">Recherche Utilisateur</span><span class="tag">Atelier centré utilisateur</span><span class="tag">Aterlier d'innovation &amp; d'idéation</span>
+              <span class="tag">Recherche Utilisateur</span><span class="tag">Atelier centré utilisateur</span
+              ><span class="tag">Aterlier d'innovation &amp; d'idéation</span>
               <span class="tag">Positionnement de marque</span>
               <span class="tag">Définition de KPI</span><span class="tag">Audit</span><span class="tag">Roadmap</span>
             </div>
           </div>
-          <hr class="service-line"/>
+          <hr class="service-line" />
         </div>
         <div class="content-accordion">
           <h3>
@@ -121,30 +132,32 @@
             </p>
             <div>
               <span class="tag">Identité visuelle</span>
-              <span class="tag">Charte graphique</span><span class="tag">Création de logo</span><span class="tag">Mise en valeur de vos espaces &amp; produits</span>
-              
-              <span class="tag">Supports de communication</span><span class="tag">Illustration</span><span class="tag">Animation 2D &amp; 3D</span>
+              <span class="tag">Charte graphique</span><span class="tag">Création de logo</span
+              ><span class="tag">Mise en valeur de vos espaces &amp; produits</span>
+
+              <span class="tag">Supports de communication</span><span class="tag">Illustration</span
+              ><span class="tag">Animation 2D &amp; 3D</span>
             </div>
           </div>
-          <hr class="service-line"/>
+          <hr class="service-line" />
         </div>
         <div class="content-accordion">
           <h3>
-            <button v-on:click="toggleDev"><span class="accordion-more">+ </span>Création de site web &amp; mobile</button>
+            <button v-on:click="toggleDev">
+              <span class="accordion-more">+ </span>Création de site web &amp; mobile
+            </button>
           </h3>
           <div class="tags" v-show="showDev">
             <div>
-              <span class="tag">Design d'interface (UI)</span><span class="tag">Expérience utilisateur (UX)</span><span class="tag">Prototypage</span><span class="tag">Wireframing</span><span class="tag">Création de boutique e-commerce (Shopify)</span
-              ><span class="tag">Système de gestion de contenu (CMS)
-
-</span><span class="tag">Développement Back-end
-
-</span><span class="tag">Développement Front-end
-
-</span><span class="tag">Landing page</span><span class="tag">Portfolio</span>
+              <span class="tag">Design d'interface (UI)</span><span class="tag">Expérience utilisateur (UX)</span
+              ><span class="tag">Prototypage</span><span class="tag">Wireframing</span
+              ><span class="tag">Création de boutique e-commerce (Shopify)</span
+              ><span class="tag">Système de gestion de contenu (CMS) </span
+              ><span class="tag">Développement Back-end </span><span class="tag">Développement Front-end </span
+              ><span class="tag">Landing page</span><span class="tag">Portfolio</span>
             </div>
           </div>
-          <hr class="service-line"/>
+          <hr class="service-line" />
         </div>
         <div class="content-accordion">
           <h3>
@@ -154,12 +167,15 @@
           </h3>
           <div class="tags" v-show="showConsulting">
             <div>
-              <span class="tag">Optimisation en ligne (SEO)</span><span class="tag">Data Analyse</span><span class="tag">Optimisation du taux de conversion (CRO)</span>
+              <span class="tag">Optimisation du référencement (SEO)</span><span class="tag">Mise en place d'outil de tracking</span
+              ><span class="tag">Data Analyse</span
+              ><span class="tag">Optimisation du taux de conversion (CRO)</span>
               <span class="tag">Recommendation produit</span><span class="tag">Campagne social média</span>
-              <span class="tag">Gestion de campagne adwords</span><span class="tag">Gestion du nom de domaine</span> <span class="tag">Formation &amp; accompagnement</span> 
+              <span class="tag">Gestion de campagne adwords</span><span class="tag">Formation</span><span class="tag">Gestion du nom de domaine et de l'hébergement</span>
+              
             </div>
           </div>
-          <hr class="service-line"/>
+          <hr class="service-line" />
         </div>
 
         <!-- <div class="content-accordion">
@@ -187,7 +203,7 @@
         </div> -->
       </div>
     </section>
-    <div class="test" v-observe-visibility="visibilityChanged" >
+    <div class="test" v-observe-visibility="visibilityChanged">
       <!-- <section>
         <section id="DatoCmsSHeadline-11960556-en">
           <span id="services"></span>
@@ -201,8 +217,8 @@
             </div>
           </div>
         </section> -->
-        <!-- 
-      <section class="section-two-column">
+
+      <!-- <section class="section-two-column">
         <div class="dontknow1">
           <div class="content-video-text">
             <div class="dontknow2">
@@ -246,6 +262,8 @@
                     src="https://studioplastac.fr/v3/wp-content/uploads/2020/12/gloria-plastac-papeterie-06.jpg"
                     alt="Maximilien Langonier développeur créatif"
                     class="hDwyTD"
+                    @scroll="scroll"
+                    :style="{ transform: `scale(${property1})` }"
                   />
                 </div>
               </div>
@@ -269,7 +287,9 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
+
+      <!--
 
       <section class="section-two-column">
         <div class="dontknow1">
@@ -337,12 +357,12 @@
             </div>
           </div>
         </div>
-      </section> -->
-      </section>
+      </section> 
+      </section>-->
 
       <section class="collaborate">
-        <p class="collaborate-first-word">Un projet? <span class="collaborate-second-word"> Parlons-en!</span></p>
-        <p></p>
+        <p class="collaborate-first-word">Un projet ? Parlons-en !</span></p>
+        <p>hey@studioclax.com</p>
       </section>
     </div>
   </div>
@@ -367,11 +387,13 @@ export default {
   // },
   data: function () {
     return {
+      hover: false,
       scrollPosition: null,
       showStrategy: false,
       showDesign: false,
       showDev: false,
       showConsulting: false,
+      property1: null,
     }
   },
   methods: {
@@ -379,6 +401,10 @@ export default {
     //   this.scrollPosition = window.scrollY
     //   console.log(this.scrollPosition)
     // },
+    scroll() {
+      // e is the event emitted from the scroll listener
+      this.property1 = 1.2
+    },
     lazyLoadImage(e) {
       let media = e.target.parentNode.querySelectorAll('[data-manual-lazy]')
       ;[...media].forEach((m) => this.$lazyLoad(m))
@@ -436,6 +462,9 @@ export default {
 </script>
 
 <style scoped>
+.active {
+  background: green;
+}
 /* .v-toolbar--bgchange {
   background: rgb(137, 186, 209);
   color: rgb(141, 62, 52);
@@ -707,13 +736,11 @@ p.content-bloc-text-p {
 }
 
 section.leader-homepage {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   align-self: start;
-  background-color: #1e344a;
   color: white;
 }
 
@@ -1035,7 +1062,8 @@ body {
   z-index: 1;
   top: 0;
   position: absolute;
-  background-color: rgb(65, 109, 128);
+  background-color: rgb(163 125 206);
+  /* background-color: rgb(65, 109, 128); */
   color: rgb(148, 217, 247);
 }
 

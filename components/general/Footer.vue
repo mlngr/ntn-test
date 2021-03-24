@@ -29,10 +29,9 @@ export default {
 
 .footer-content {
   overflow: hidden;
-  font-family: 'Work Sans', sans-serif;
   font-size: 2rem;
   letter-spacing: -1px;
-  font-weight: 100;
+  font-weight: 200;
   text-transform: lowercase;
   display: flex;
   justify-content: space-between;
